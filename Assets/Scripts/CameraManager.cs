@@ -9,7 +9,6 @@ public class CameraManager : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
-    private bool foodIsBeingGrabbed;
 
     void Start()
     {
@@ -19,10 +18,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if (!Food.instance.isBeingDragged)
-        {
-            MoveCamera();
-        }
+        MoveCamera();
     }
 
     private void MoveCamera()
