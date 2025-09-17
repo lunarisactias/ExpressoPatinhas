@@ -5,7 +5,7 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private Transform[] cameraPoints;
     [SerializeField] private float moveSpeed = 5f;
-    private int currentPointIndex = 2;
+    public int currentPointIndex = 2;
     private Rigidbody2D rb;
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
@@ -33,7 +33,7 @@ public class CameraManager : MonoBehaviour
     public void MoveCameraLeft()
     {
         Swipe();
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended && startTouchPosition.x < endTouchPosition.x - swipeThreshold)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.x < endTouchPosition.x - swipeThreshold)
         {
             if (currentPointIndex > 0) currentPointIndex -= 1;
             StopAllCoroutines();
@@ -44,7 +44,7 @@ public class CameraManager : MonoBehaviour
     public void MoveCameraRight()
     {
         Swipe();
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended && startTouchPosition.x > endTouchPosition.x + swipeThreshold)
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.x > endTouchPosition.x + swipeThreshold)
         {
             if (currentPointIndex < 4) currentPointIndex += 1;
             StopAllCoroutines();
@@ -54,11 +54,11 @@ public class CameraManager : MonoBehaviour
 
     private void Swipe()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Began)
         {
             startTouchPosition = Input.GetTouch(0).position;
         }
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended)
         {
             endTouchPosition = Input.GetTouch(0).position;
         }
