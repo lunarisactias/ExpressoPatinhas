@@ -23,19 +23,6 @@ public class Food : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Animal"))
-        {
-            Animal animal = collision.gameObject.GetComponent<Animal>();
-            if (animal != null)
-            {
-                animal.Feed(nutritionValue);
-                Destroy(gameObject);
-            }
-        }
-    }
-
     private void Move()
     {
         if (Input.touchCount != 0)
