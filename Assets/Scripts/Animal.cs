@@ -1,6 +1,8 @@
 using System;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Animal : MonoBehaviour
 {
@@ -17,6 +19,11 @@ public class Animal : MonoBehaviour
     [Range(0f, 100f)]
     [SerializeField] private float hunger;
 
+    [Header("Animal UI")]
+    [SerializeField] private Slider hungerLevel;
+    [SerializeField] private Slider happinessLevel;
+    [SerializeField] private TMPro.TextMeshProUGUI nameText;
+
     [Header("Animal Stats Settings")]
     [SerializeField] private float timeInSecondsToHungerFull = 86400f; // 24 hours
     [SerializeField] private float timeInSecondToHappinessEmpty = 14400f; // 4 hours
@@ -25,14 +32,16 @@ public class Animal : MonoBehaviour
 
     private void Awake()
     {
+        hungerRate = 100f / timeInSecondsToHungerFull;
+        happinessRate = 100f / timeInSecondToHappinessEmpty;
+        nameText.text = animalName;
         LoadData();
     }
 
-    private void Start()
-    {
-    }
     private void Update()
     {
+        hungerLevel.value = hunger;
+        happinessLevel.value = happiness;
         Hunger();
         ClampStats();
     }
@@ -96,9 +105,6 @@ public class Animal : MonoBehaviour
 
     public void LoadData()
     {
-        hungerRate = 100f / timeInSecondsToHungerFull;
-        happinessRate = 100f / timeInSecondToHappinessEmpty;
-
         string hungerKey = uniqueId + "_Hunger";
         string happinessKey = uniqueId + "_Happiness";
         string timeKey = uniqueId + "_LastSessionTime";
