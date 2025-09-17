@@ -454,7 +454,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85de728047665374daeef09cb6de0994, type: 3}
+  m_Script: {fileID: 11500000, guid: 434dcbfc7bcf6f643ae4f0ddaec87995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPoints:
@@ -464,6 +464,7 @@ MonoBehaviour:
   - {fileID: 777428472}
   - {fileID: 1477087354}
   moveSpeed: 100
+  currentPointIndex: 2
   swipeThreshold: 400
 --- !u!50 &519420034
 Rigidbody2D:
