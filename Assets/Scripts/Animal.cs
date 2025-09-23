@@ -12,6 +12,7 @@ public class Animal : MonoBehaviour
     [SerializeField] private int age;
     [SerializeField] private string species;
     [SerializeField] private string color;
+    public ThingColor thingColor;
 
     [Header("Animal Stats")]
     [Range(0f, 100f)]
@@ -40,13 +41,19 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        hungerLevel.value = hunger;
-        happinessLevel.value = happiness;
+        AnimalHUD();
         Hunger();
         ClampStats();
     }
 
-    public void Feed(float foodAmount)
+    public enum ThingColor
+    {
+        Red,
+        Green,
+        Blue
+    }
+
+    public void FeedAnimal(float foodAmount)
     {
         hunger -= foodAmount;
         if (hunger < 0) hunger = 0;
@@ -77,6 +84,12 @@ public class Animal : MonoBehaviour
         if (hunger < 0f) hunger = 0f;
         if (happiness > 100f) happiness = 100f;
         if (happiness < 0f) happiness = 0f;
+    }
+
+    private void AnimalHUD()
+    {
+        hungerLevel.value = hunger;
+        happinessLevel.value = happiness;
     }
 
     void OnApplicationQuit()

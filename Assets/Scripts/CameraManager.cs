@@ -18,7 +18,10 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        MoveCamera();
+        if (!Food.instance.isBeingDragged)
+        {
+            MoveCamera();
+        }
     }
 
     private void MoveCamera()
