@@ -8,6 +8,8 @@ public class Food : MonoBehaviour
 
     public bool isBeingDragged { get; set; }
     private Rigidbody2D rb;
+    private bool isPlacedInAnimalMouth = false;
+    private GameObject animalToBeFed;
 
     public static Food instance;
 
@@ -21,6 +23,7 @@ public class Food : MonoBehaviour
     void Update()
     {
         Move();
+        FeedFood();
     }
 
     private void Move()
@@ -52,8 +55,34 @@ public class Food : MonoBehaviour
         }
     }
 
+    public void FeedFood()
+    {
+        if (Input.touchCount != 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (isPlacedInAnimalMouth && touch.phase == TouchPhase.Ended && animalToBeFed != null)
+            {
+                Destroy(gameObject);
+                animalToBeFed.GetComponent<Animal>().FeedAnimal(nutritionValue);
+            }
+        }
+    }
+
     public bool GetIsBeingDragged()
     {
         return isBeingDragged;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger Entered");
+
+        if (collision.gameObject.CompareTag("Animal") && !isPlacedInAnimalMouth)
+        {
+            isPlacedInAnimalMouth = true;
+            animalToBeFed = collision.gameObject;
+            Debug.Log(isPlacedInAnimalMouth + animalToBeFed.name);
+        }
     }
 }
