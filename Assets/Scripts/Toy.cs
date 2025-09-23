@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class Food : MonoBehaviour
+public class Toy : MonoBehaviour
 {
-    [Header("Food Info")]
-    [SerializeField] private string foodName;
-    [SerializeField] private float nutritionValue;
+    [Header("Toy Info")]
+    [SerializeField] private string toyName;
+    [SerializeField] private float happinessValue;
 
     public bool isBeingDragged { get; set; }
     private Rigidbody2D rb;
     private bool isPlacedInAnimal = false;
-    private GameObject animalToBeFed;
+    private GameObject animalToPlayWith;
 
-    public static Food instance;
+    public static Toy instance;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Food : MonoBehaviour
     void Update()
     {
         Move();
-        FeedFood();
+        PlayWith();
     }
 
     private void Move()
@@ -55,18 +55,18 @@ public class Food : MonoBehaviour
         }
     }
 
-    public void FeedFood()
+    public void PlayWith()
     {
         if (Input.touchCount != 0)
         {
             Touch touch = Input.GetTouch(0);
 
-            if (isPlacedInAnimal && touch.phase == TouchPhase.Ended && animalToBeFed != null)
+            if (isPlacedInAnimal && touch.phase == TouchPhase.Ended && animalToPlayWith != null)
             {
                 Destroy(gameObject);
-                if (animalToBeFed != null)
+                if (animalToPlayWith != null)
                 {
-                    animalToBeFed.GetComponent<Animal>().FeedAnimal(nutritionValue);
+                    animalToPlayWith.GetComponent<Animal>().PlayWithToy(happinessValue);
                 }
             }
         }
@@ -79,11 +79,10 @@ public class Food : MonoBehaviour
         if (collision.gameObject.CompareTag("Animal") && !isPlacedInAnimal)
         {
             isPlacedInAnimal = true;
-            animalToBeFed = collision.gameObject;
-            Debug.Log(isPlacedInAnimal + animalToBeFed.name);
+            animalToPlayWith = collision.gameObject;
         }
     }
-
+    
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Animal") && isPlacedInAnimal)
@@ -91,4 +90,5 @@ public class Food : MonoBehaviour
             isPlacedInAnimal = false;
         }
     }
+
 }

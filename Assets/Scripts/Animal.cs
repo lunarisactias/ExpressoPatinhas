@@ -12,7 +12,6 @@ public class Animal : MonoBehaviour
     [SerializeField] private int age;
     [SerializeField] private string species;
     [SerializeField] private string color;
-    public ThingColor thingColor;
 
     [Header("Animal Stats")]
     [Range(0f, 100f)]
@@ -28,6 +27,11 @@ public class Animal : MonoBehaviour
     [Header("Animal Stats Settings")]
     [SerializeField] private float timeInSecondsToHungerFull = 86400f; // 24 hours
     [SerializeField] private float timeInSecondToHappinessEmpty = 14400f; // 4 hours
+
+    [Header("Animal Movement")]
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private Collider2D movementArea;
+
     private float hungerRate;
     private float happinessRate;
 
@@ -45,14 +49,6 @@ public class Animal : MonoBehaviour
         Hunger();
         ClampStats();
     }
-
-    public enum ThingColor
-    {
-        Red,
-        Green,
-        Blue
-    }
-
     public void FeedAnimal(float foodAmount)
     {
         hunger -= foodAmount;
@@ -61,7 +57,7 @@ public class Animal : MonoBehaviour
         if (happiness > 100) happiness = 100;
     }
 
-    public void PlayWith(float funAmount)
+    public void PlayWithToy(float funAmount)
     {
         happiness += funAmount;
         hunger += funAmount * 0.1f;
@@ -92,21 +88,12 @@ public class Animal : MonoBehaviour
         happinessLevel.value = happiness;
     }
 
-    void OnApplicationQuit()
-    {
-        if (!string.IsNullOrEmpty(uniqueId))
-        {
-            SaveData();
-        }
-    }
-
     public void SaveData()
     {
         string hungerKey = uniqueId + "_Hunger";
         string happinessKey = uniqueId + "_Happiness";
         string timeKey = uniqueId + "_LastSessionTime";
 
-        Debug.Log($"Salvando dados para o ID: {uniqueId}");
         PlayerPrefs.SetFloat(hungerKey, hunger);
         PlayerPrefs.SetFloat(happinessKey, happiness);
 
@@ -124,7 +111,6 @@ public class Animal : MonoBehaviour
 
         if (PlayerPrefs.HasKey(timeKey))
         {
-            Debug.Log($"Carregando dados para o ID: {uniqueId}");
             hunger = PlayerPrefs.GetFloat(hungerKey);
             happiness = PlayerPrefs.GetFloat(happinessKey);
 
@@ -133,7 +119,7 @@ public class Animal : MonoBehaviour
             TimeSpan timePassed = DateTime.UtcNow.Subtract(lastSession);
             float secondsPassed = (float)timePassed.TotalSeconds;
 
-            Debug.Log($"Tempo desde a última sessão: {secondsPassed} segundos");
+            Debug.Log($"Minutos desde a última sessão: {secondsPassed/60} minutos");
 
             float hungerGained = secondsPassed * hungerRate;
             hunger += hungerGained;
@@ -155,9 +141,13 @@ public class Animal : MonoBehaviour
 
             ClampStats();
         }
-        else
+    }
+
+    void OnApplicationQuit()
+    {
+        if (!string.IsNullOrEmpty(uniqueId))
         {
-            Debug.Log($"Nenhum dado salvo encontrado para o ID: {uniqueId}.");
+            SaveData();
         }
     }
 }

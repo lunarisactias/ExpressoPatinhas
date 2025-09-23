@@ -18,7 +18,11 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if (!Food.instance.isBeingDragged)
+        if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged)
+        {
+            return;
+        }
+        else
         {
             MoveCamera();
         }
