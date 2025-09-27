@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f5f80af0f4cd6d418c6bd3e9ffdf82a
+guid: 8921fcd2308aaf54e87cb3acecd55e2c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5214773348412636617
-    second: Tela Menu_0
+      213: 7139849577753286379
+    second: cachorro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tela Menu_0
+      name: cachorro_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 900
-        height: 1600
+        width: 514
+        height: 742
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cd3f483bb89e5840800000000000000
-      internalID: 5214773348412636617
+      spriteID: be615b7cc57d51360800000000000000
+      internalID: 7139849577753286379
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Tela Menu_0: 5214773348412636617
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
