@@ -1,19 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 434dcbfc7bcf6f643ae4f0ddaec87995
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
-  executionOrder: 120
+  executionOrder: 50
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-<<<<<<< HEAD
-guid: 14ae5290efcd436418086147075611c5
-=======
-guid: 434dcbfc7bcf6f643ae4f0ddaec87995
->>>>>>> Luna
->>>>>>> main
