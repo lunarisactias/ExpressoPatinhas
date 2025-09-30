@@ -3,6 +3,8 @@ using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.ComponentModel;
+using System.Collections;
 
 public class Animal : MonoBehaviour
 {
@@ -10,8 +12,8 @@ public class Animal : MonoBehaviour
     public string uniqueId;
     [SerializeField] private string animalName;
     [SerializeField] private int age;
-    [SerializeField] private string species;
-    [SerializeField] private string color;
+    [SerializeField] private Species specie;
+    [SerializeField] private Colors color;
 
     [Header("Animal Stats")]
     [Range(0f, 100f)]
@@ -34,13 +36,43 @@ public class Animal : MonoBehaviour
 
     private float hungerRate;
     private float happinessRate;
+    private Rigidbody2D rb;
+
+    public enum Species
+    {
+        Gato,
+        Cachorro,
+        Cabra,
+        Galinha,
+        Ouriço,
+        Guaxinim,
+        Lontra,
+        [Description("Panda Vermelho")]
+        Panda_Vermelho,
+        Carpa,
+        Coelhinho,
+        Veado
+    }
+
+    public enum Colors
+    {
+        Branco,
+        Preto,
+        Cinza,
+        Marrom,
+        Laranja,
+        Rajado,
+        Misturado
+    }
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         hungerRate = 100f / timeInSecondsToHungerFull;
         happinessRate = 100f / timeInSecondToHappinessEmpty;
         nameText.text = animalName;
         LoadData();
+        StartCoroutine(MoveRandomly());
     }
 
     private void Update()
@@ -49,6 +81,24 @@ public class Animal : MonoBehaviour
         Hunger();
         ClampStats();
     }
+
+    IEnumerator MoveRandomly()
+    {
+        while (true)
+        {
+            Debug.Log("Iniciando movimento aleatório");
+
+            Vector2 newPos = new Vector2(
+                UnityEngine.Random.Range(movementArea.bounds.min.x, movementArea.bounds.max.x),
+                UnityEngine.Random.Range(movementArea.bounds.min.y, movementArea.bounds.max.y)
+            );
+
+            rb.MovePosition(Vector2.MoveTowards(rb.position, newPos, moveSpeed * Time.deltaTime));
+
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 2f));
+        }
+    }
+
     public void FeedAnimal(float foodAmount)
     {
         hunger -= foodAmount;
