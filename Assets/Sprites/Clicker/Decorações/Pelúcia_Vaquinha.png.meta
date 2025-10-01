@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8921fcd2308aaf54e87cb3acecd55e2c
+guid: 1fdbbff5c2ee64e47b23b239ec1543cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7139849577753286379
-    second: cachorro_0
+      213: 5790424661142365544
+    second: "Pel\xFAcia_Vaquinha_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cachorro_0
+      name: "Pel\xFAcia_Vaquinha_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 514
-        height: 742
+        x: 603
+        y: 13
+        width: 461
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be615b7cc57d51360800000000000000
-      internalID: 7139849577753286379
+      spriteID: 8656d02ec88bb5050800000000000000
+      internalID: 5790424661142365544
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cachorro_0: 7139849577753286379
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb6bb7218fb3aca48b96851cc76cce1b
+guid: 99c7f67ad4bb2ad46a1ac693f9e34c32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -304956245587001104
-    second: 2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0
+      213: 7279807537817448851
+    second: WhatsApp_Image_2025-09-23_at_20.01.19-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0
+      name: WhatsApp_Image_2025-09-23_at_20.01.19-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 900
-        height: 1600
+        x: 96
+        y: 89
+        width: 310
+        height: 324
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f000cd09e394cbf0800000000000000
-      internalID: -304956245587001104
+      spriteID: 391f1d4b262170560800000000000000
+      internalID: 7279807537817448851
       vertices: []
       indices: 
       edges: []
@@ -134,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0: -304956245587001104
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
