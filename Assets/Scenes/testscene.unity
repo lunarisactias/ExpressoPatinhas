@@ -582,7 +582,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215631550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -55.6537}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.004385965, y: 0.004385965, z: 0.004385965}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1382,7 +1382,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455855537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001739502}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1935,7 +1935,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1358917240}
-  - {fileID: 1132080111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &780485261
@@ -2062,11 +2061,11 @@ GameObject:
   - component: {fileID: 830004832}
   m_Layer: 0
   m_Name: Tapete
-  m_TagString: Untagged
+  m_TagString: Decoracao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &830004831
 Transform:
   m_ObjectHideFlags: 0
@@ -2076,7 +2075,7 @@ Transform:
   m_GameObject: {fileID: 830004830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.261, z: -47.703175}
+  m_LocalPosition: {x: 0, y: -0.261, z: 1}
   m_LocalScale: {x: 0.09000001, y: 0.06428572, z: 0.09000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2163,7 +2162,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849326468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001739502}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2313,11 +2312,11 @@ GameObject:
   - component: {fileID: 979765560}
   m_Layer: 0
   m_Name: Vaca
-  m_TagString: Untagged
+  m_TagString: Decoracao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &979765559
 Transform:
   m_ObjectHideFlags: 0
@@ -2327,7 +2326,7 @@ Transform:
   m_GameObject: {fileID: 979765558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.231, y: -0.43, z: -47.703175}
+  m_LocalPosition: {x: 0.231, y: -0.43, z: 1}
   m_LocalScale: {x: 0.07, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2565,12 +2564,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132080110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -55.6537}
-  m_LocalScale: {x: 0.004385965, y: 0.004385965, z: 0.004385965}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.004385965, y: 0.0043859654, z: 0.0043859654}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1762292424}
-  m_Father: {fileID: 780485260}
+  m_Father: {fileID: 1358917240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2652,11 +2651,11 @@ GameObject:
   - component: {fileID: 1240242204}
   m_Layer: 0
   m_Name: Planta
-  m_TagString: Untagged
+  m_TagString: Decoracao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1240242203
 Transform:
   m_ObjectHideFlags: 0
@@ -2666,7 +2665,7 @@ Transform:
   m_GameObject: {fileID: 1240242202}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 0.33, z: -47.703175}
+  m_LocalPosition: {x: 0.346, y: 0.33, z: 1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2908,7 +2907,7 @@ Transform:
   m_GameObject: {fileID: 1329221409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2923,6 +2922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358917240}
+  - component: {fileID: 1358917241}
   m_Layer: 0
   m_Name: "Decora\xE7\xE3o"
   m_TagString: Untagged
@@ -2946,8 +2946,22 @@ Transform:
   - {fileID: 830004831}
   - {fileID: 979765559}
   - {fileID: 1240242203}
+  - {fileID: 1132080111}
   m_Father: {fileID: 780485260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358917241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358917239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ef8e0c41eceb34cb7058be773bbc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decoracoes: []
 --- !u!1 &1369689297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,7 +3355,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573652183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.002609253}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3925,6 +3939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36698099ef59d704b99eee12b1b09ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexUpgrade: 0
   coinText: {fileID: 1587819615}
   autoclickerText: {fileID: 1744641181}
   animais: 0

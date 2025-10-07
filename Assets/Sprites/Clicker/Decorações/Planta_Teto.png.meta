@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Planta_Teto_0: 1518853509925919832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
