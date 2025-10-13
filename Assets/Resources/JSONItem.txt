@@ -1,0 +1,21 @@
+{
+	"item": [
+		{
+			"name": "Tapete Velho",
+			"descricao": "Já foi bonito, não mais.",
+			"prefabName": "aa",
+			"price": 50,
+			"activated": false
+		},
+		
+		{
+			"name": "pelucia antiga",
+			"descricao": "Ainda possui seu charme..."
+			"prefabName": "abb",
+			"price": 25,
+			"activated": false
+		}
+
+
+	]
+}
