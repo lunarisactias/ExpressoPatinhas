@@ -1,14 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 
 public class InventoryManager : MonoBehaviour
 {
-    public ItemClass itemToAdd;
-    public ItemClass itemToAdd2;
+    public ItemClass[] itemsToAdd;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private GameObject slotsHolder;
     [SerializeField] private int minimumSlots;
-    [SerializeField] private List<ItemClass> items = new List<ItemClass>();
+    [SerializeField] private List<SlotClass> items = new List<SlotClass>();
     private GameObject[] slots;
 
     private void Start()
@@ -24,21 +25,12 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            AddItem(itemToAdd);
-            RefreshUI();
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            AddItem(itemToAdd2);
+            AddItem(itemsToAdd[Random.Range(0, itemsToAdd.Length)]);
             RefreshUI();
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (items.Count > 0)
-            {
-                RemoveItem(items[items.Count - 1]);
-                RefreshUI();
-            }
+            RemoveItem(itemsToAdd[Random.Range(0, itemsToAdd.Length)]);
         }
     }
 
@@ -46,47 +38,98 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            var image = slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>();
-            if (i < items.Count)
+            try
             {
-                image.enabled = true;
-                image.sprite = items[i].itemIcon;
+                slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().enabled = true;
+                slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = items[i].GetItem().itemIcon;
+                slots[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = items[i].GetQuantity().ToString();
             }
-            else
+            catch
             {
-                image.sprite = null;
-                image.enabled = false;
+                if (slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>())
+                {
+                    slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = null;
+                }
+                slots[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
             }
         }
     }
 
     public void AddItem(ItemClass item)
     {
-        if (items.Count >= slotsHolder.transform.childCount)
+        SlotClass slot = ContainsItem(item);
+        if (slot != null)
         {
-            Instantiate(slotPrefab, slotsHolder.transform);
-            slots = new GameObject[slotsHolder.transform.childCount];
-            for (int i = 0; i < slots.Length; i++)
-            {
-                slots[i] = slotsHolder.transform.GetChild(i).gameObject;
-            }
+            slot.AddQuantity(1);
         }
+        else
+        {
+            items.Add(new SlotClass(item, 1));
 
-        items.Add(item);
+            if (items.Count > slotsHolder.transform.childCount)
+            {
+                Instantiate(slotPrefab, slotsHolder.transform);
+                slots = new GameObject[slotsHolder.transform.childCount];
+                for (int i = 0; i < slots.Length; i++)
+                {
+                    slots[i] = slotsHolder.transform.GetChild(i).gameObject;
+                }
+                RefreshUI(); 
+            }
+
+        }
 
         Debug.Log($"Added item: {item.itemName}");
     }
 
-    public void RemoveItem(ItemClass item)
+    public bool RemoveItem(ItemClass item)
     {
-        if (items.Contains(item))
+        SlotClass temp = ContainsItem(item);
+        if (temp != null)
         {
-            items.Remove(item);
-            Debug.Log($"Removed item: {item.itemName}");
+            if (temp.GetQuantity() > 1)
+            {
+                temp.SubQuantity(1);
+            }
+            else
+            {
+                SlotClass slotToRemove = new SlotClass();
+                foreach (SlotClass slot in items)
+                {
+                    if (slot.GetItem() == item)
+                    {
+                        slotToRemove = slot;
+                        break;
+                    }
+                }
+
+                items.Remove(slotToRemove);
+            }
+        }
+        else
+        {
+            return false;
         }
         if (items.Count >= minimumSlots && slotsHolder.transform.childCount > minimumSlots)
         {
             Destroy(slotsHolder.transform.GetChild(slotsHolder.transform.childCount - 1).gameObject);
         }
+
+        RefreshUI();
+        return true;
+    }
+
+    public SlotClass ContainsItem(ItemClass item)
+    {
+        foreach (SlotClass slot in items)
+        {
+            if (slot.GetItem() == item)
+            {
+                return slot;
+            }
+        }
+
+        return null;
     }
 }
