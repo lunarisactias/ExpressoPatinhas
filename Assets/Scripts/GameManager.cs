@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     [Header("CLICKER")]
     public int coins { get; private set; }
+
     public int clickAmount { get; private set; } = 1;
     public int autoClickAmount { get; private set; } = 0;
     private bool autoClick = false;
@@ -14,12 +15,9 @@ public class GameManager : MonoBehaviour
     private float autoClickTimerDelay = 2f;
     public int indexUpgrade;
 
-    //TEXTO
+    [Header("texto :)")]
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI autoclickerText;
-
-    [Header("Animais")]
-    public int animais;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,6 +48,7 @@ public class GameManager : MonoBehaviour
         coins += clickAmount;
     }
 
+
     public void UpgradeClick(ShopButton button)
     {
         clickAmount++;
@@ -67,7 +66,7 @@ public class GameManager : MonoBehaviour
             button.price = Mathf.CeilToInt(button.price * button.priceMultiplier);
             indexUpgrade++;
         }
-        
+
     }
 
     public void AutoClick(ShopButton button)
