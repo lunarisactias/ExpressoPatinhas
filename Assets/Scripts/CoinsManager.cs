@@ -12,6 +12,4 @@ public class CoinsManager : MonoBehaviour
     }
 
     public bool canAfford(int cost) => Coins >= cost;
-
-    public void Add(int amount) => Coins = Mathf.Max(0, Coins + amount);
 }

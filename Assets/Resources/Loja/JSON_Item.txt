@@ -1,0 +1,27 @@
+{
+	"item": [
+		{
+			"id": "1",
+			"name": "Tapete Velho",
+			"descricao": "Ja foi bonito, nao mais.",
+			"imagepatch": "Loja/Sprites/Carpet",
+			"prefabName": "aa",
+			"price": 20,
+			"purchased": false,
+			"prefabpatch": "Loja/Sprites/Carpet"
+		},
+		
+		{
+			"id": "2",
+			"name": "pelucia antiga",
+			"descricao": "Ainda possui seu charme...",
+			"imagepatch": "Loja/Sprites/CowPlush",
+			"prefabName": "abb",
+			"price": 50,
+			"purchased": false,
+			"prefabpatch": "Loja/Sprites/CowPlush"
+		}
+
+
+	]
+}

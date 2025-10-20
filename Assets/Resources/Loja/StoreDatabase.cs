@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class StoreDatabase : MonoBehaviour
 {
-    [SerializeField] private string jsonResourcePath = "Resources/JSONItem";
+    [SerializeField] private string jsonResourcePath = "Loja/JSON_Item";
     private Dictionary<string, StoreItemDto> _map;
 
     [SerializeField] private bool clearOnStart = false;

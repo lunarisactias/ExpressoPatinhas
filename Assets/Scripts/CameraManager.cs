@@ -10,6 +10,9 @@ public class CameraManager : MonoBehaviour
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
 
+    [Header("LOJA")]
+    public bool storeOpen;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,7 +21,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged)
+        if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged || storeOpen)
         {
             return;
         }
@@ -32,6 +35,7 @@ public class CameraManager : MonoBehaviour
     {
         MoveCameraLeft();
         MoveCameraRight();
+        MoveCameraUp();
     }
     public void MoveCameraLeft()
     {
@@ -52,6 +56,17 @@ public class CameraManager : MonoBehaviour
             if (currentPointIndex < 4) currentPointIndex += 1;
             StopAllCoroutines();
             StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
+        }
+    }
+
+    public void MoveCameraUp()
+    {
+        Swipe();
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.y < endTouchPosition.y - swipeThreshold)
+        {
+            storeOpen = true;
+            //StopAllCoroutines();
+            //StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
         }
     }
 

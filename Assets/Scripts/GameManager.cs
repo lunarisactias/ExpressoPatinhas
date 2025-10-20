@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private bool autoClick = false;
     private float autoClickTimer = 0f;
     private float autoClickTimerDelay = 2f;
-    public int indexUpgrade;
 
     [Header("texto :)")]
     public TextMeshProUGUI coinText;
@@ -54,7 +53,6 @@ public class GameManager : MonoBehaviour
         clickAmount++;
         coins -= button.price;
         button.price = Mathf.CeilToInt(button.price * button.priceMultiplier);
-        indexUpgrade++;
     }
 
     public void FasterAutoClick(ShopButton button)
@@ -64,7 +62,6 @@ public class GameManager : MonoBehaviour
             autoClickTimerDelay /= 1.05f;
             coins -= button.price;
             button.price = Mathf.CeilToInt(button.price * button.priceMultiplier);
-            indexUpgrade++;
         }
 
     }
@@ -75,6 +72,5 @@ public class GameManager : MonoBehaviour
         autoClick = true;
         coins -= button.price;
         button.price = Mathf.CeilToInt(button.price * button.priceMultiplier);
-        indexUpgrade++;
     }
 }
