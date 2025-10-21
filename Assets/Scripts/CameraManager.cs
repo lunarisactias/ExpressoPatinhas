@@ -65,7 +65,6 @@ public class CameraManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.y < endTouchPosition.y - swipeThreshold)
         {
             storeOpen = true;
-            StopAllCoroutines();
             //StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
         }
     }

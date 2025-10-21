@@ -107,8 +107,8 @@ public class StoreModalController : MonoBehaviour
 
     private void OnPurchaseSucceeded(StoreItemDto item)
     {
-        ShowFeedback("Sucesso", $"Compra de \"{item.name}\" realizada.");
         RefreshList();
+        ShowFeedback("Sucesso", $"Compra de \"{item.name}\" realizada.");
     }
 
     private void OnPurchaseFailed(StoreItemDto item, string reason)

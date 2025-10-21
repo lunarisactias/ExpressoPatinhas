@@ -5,10 +5,10 @@
 			"name": "Tapete Velho",
 			"descricao": "Ja foi bonito, nao mais.",
 			"imagepatch": "Loja/Sprites/Carpet",
-			"prefabName": "aa",
 			"price": 20,
 			"purchased": false,
-			"prefabpatch": "Loja/Sprites/Carpet"
+			"prefabName": "Carpet",
+			"prefabpatch": "Loja/Prefabs/Decorations/Carpet"
 		},
 		
 		{
@@ -16,10 +16,10 @@
 			"name": "pelucia antiga",
 			"descricao": "Ainda possui seu charme...",
 			"imagepatch": "Loja/Sprites/CowPlush",
-			"prefabName": "abb",
 			"price": 50,
 			"purchased": false,
-			"prefabpatch": "Loja/Sprites/CowPlush"
+			"prefabName": "CowPlush",
+			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush"
 		}
 
 

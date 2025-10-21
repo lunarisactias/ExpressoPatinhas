@@ -8,6 +8,7 @@ public class StoreManager : MonoBehaviour
 
     [SerializeField] private CoinsManager coinsManager;
     [SerializeField] private StoreDatabase storeDB;
+    [SerializeField] private Transform decoParent;
 
     public void TryPurchase(StoreItemDto item)
     {
@@ -20,8 +21,21 @@ public class StoreManager : MonoBehaviour
             return;
         }
 
+        if (!coinsManager.TryDebit(item.price))
+        {
+            OnPurchaseFailed?.Invoke(item, "Falha ao debitar moedas.");
+            return;
+        }
+
         storeDB.SavePurchase(item.id);
         item.purchased = true;
 
+        if (!string.IsNullOrEmpty(item.prefabpatch))
+        {
+            var prefab = Resources.Load<GameObject>(item.prefabpatch);
+            if (prefab != null) Instantiate(prefab, decoParent);
+        }
+
+        OnPurchaseSucceeded?.Invoke(item);
     }
 }

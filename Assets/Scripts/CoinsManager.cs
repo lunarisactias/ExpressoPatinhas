@@ -12,4 +12,11 @@ public class CoinsManager : MonoBehaviour
     }
 
     public bool canAfford(int cost) => Coins >= cost;
+
+    public bool TryDebit(int cost)
+    {
+        if (!canAfford(cost)) return false;
+        Coins -= cost;
+        return true;
+    }
 }
