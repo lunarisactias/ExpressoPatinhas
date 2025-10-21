@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class CoinsText : MonoBehaviour
+public class CoinsDisplay : MonoBehaviour
 {
     [SerializeField] private CoinsManager wallet;
     private TMP_Text textCoins;
@@ -22,7 +22,7 @@ public class CoinsText : MonoBehaviour
         StoreManager.OnPurchaseSucceeded -= _ => UpdateCoins();
     }
 
-    private void UpdateCoins()
+    public void UpdateCoins()
     {
         textCoins.text = wallet.Coins.ToString();
     }

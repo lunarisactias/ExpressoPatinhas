@@ -12,6 +12,9 @@ using System.Collections.Generic;
         public string prefabpatch;
         public int price;
         public bool purchased;
+
+        //UPGRADES
+        //public UpgradeType upgradeType;
     }
 
     [Serializable]
@@ -19,3 +22,10 @@ using System.Collections.Generic;
     {
         public List<StoreItemDto> item;
     }
+
+    //[Serializable]
+    //public enum UpgradeType
+    //{
+    //    AutoClickSpeed,
+    //    AutoClickPotency
+    //}

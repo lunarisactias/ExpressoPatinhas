@@ -33,9 +33,9 @@ public class CameraManager : MonoBehaviour
 
     private void MoveCamera()
     {
+        MoveCameraUp();
         MoveCameraLeft();
         MoveCameraRight();
-        MoveCameraUp();
     }
     public void MoveCameraLeft()
     {

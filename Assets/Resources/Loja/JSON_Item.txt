@@ -2,7 +2,7 @@
 	"item": [
 		{
 			"id": "1",
-			"name": "Tapete Velho",
+			"name": "Tapete velho",
 			"descricao": "Ja foi bonito, nao mais.",
 			"imagepatch": "Loja/Sprites/Carpet",
 			"price": 20,
@@ -13,15 +13,25 @@
 		
 		{
 			"id": "2",
-			"name": "pelucia antiga",
+			"name": "Pelucia antiga",
 			"descricao": "Ainda possui seu charme...",
 			"imagepatch": "Loja/Sprites/CowPlush",
 			"price": 50,
 			"purchased": false,
 			"prefabName": "CowPlush",
 			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush"
-		}
+		},
 
+		{
+			"id": "3",
+			"name": "Planta suspensa",
+			"descricao": "Melhora o ambiente",
+			"imagepatch": "Loja/Sprites/Plant",
+			"price": 100,
+			"purchased": false,
+			"prefabName": "Plant",
+			"prefabpatch": "Loja/Prefabs/Decorations/Plant"
+		}
 
 	]
 }
