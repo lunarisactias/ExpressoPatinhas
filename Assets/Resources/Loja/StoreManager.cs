@@ -23,6 +23,5 @@ public class StoreManager : MonoBehaviour
         storeDB.SavePurchase(item.id);
         item.purchased = true;
 
-        GameObject.Find(item.name).SetActive(true);
     }
 }

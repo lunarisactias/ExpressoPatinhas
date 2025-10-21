@@ -1,5 +1,7 @@
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,14 +31,11 @@ public class StoreModalController : MonoBehaviour
     [SerializeField] private TMP_Text feedbackMessageText;
     [SerializeField] private Button closeFeedbackBtn;
 
-    void Update()
+    private void Update()
     {
-        if(cameraManager.storeOpen == true)
-        {
-            ShowStore();
-        }    
+        if (cameraManager.storeOpen) { ShowStore(); }
+        else { HideStore(); }
     }
-
     private void OnEnable()
     {
         //openStoreBtn.onClick.AddListener(ShowStore);
@@ -48,6 +47,7 @@ public class StoreModalController : MonoBehaviour
         StoreManager.OnPurchaseSucceeded += OnPurchaseSucceeded;
         StoreManager.OnPurchaseFailed += OnPurchaseFailed;
 
+        RefreshList();
         HideStore();
         HideFeedback();
     }
@@ -66,7 +66,6 @@ public class StoreModalController : MonoBehaviour
     private void ShowStore()
     {
         modalTitleText.text = "Store";
-        RefreshList();
         storeModalPanel.SetActive(true);
     }
 

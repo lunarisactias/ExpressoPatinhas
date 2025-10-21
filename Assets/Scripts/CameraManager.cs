@@ -21,7 +21,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged || storeOpen)
+        if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged)
         {
             return;
         }
@@ -65,7 +65,7 @@ public class CameraManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.y < endTouchPosition.y - swipeThreshold)
         {
             storeOpen = true;
-            //StopAllCoroutines();
+            StopAllCoroutines();
             //StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
         }
     }
