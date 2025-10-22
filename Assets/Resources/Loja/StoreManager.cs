@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class StoreManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class StoreManager : MonoBehaviour
 
     public void TryPurchase(StoreItemDto item)
     {
+
         if (item == null) { OnPurchaseFailed?.Invoke(item, "item invalido"); return;}
         if (item.purchased) { OnPurchaseFailed?.Invoke(item, "item já comprado"); return;}
 
@@ -30,11 +32,20 @@ public class StoreManager : MonoBehaviour
         storeDB.SavePurchase(item.id);
         item.purchased = true;
 
+
         if (!string.IsNullOrEmpty(item.prefabpatch))
         {
             var prefab = Resources.Load<GameObject>(item.prefabpatch);
             if (prefab != null) Instantiate(prefab, decoParent);
         }
+
+        //switch (item.upgrade.key)
+        //{
+        //    case UpgradeKey.BetterClick:
+        //        int valueInt = (int)item.upgrade.value;
+        //        coinsManager.clickPower += valueInt;
+        //        break;
+        //}
 
         OnPurchaseSucceeded?.Invoke(item);
     }

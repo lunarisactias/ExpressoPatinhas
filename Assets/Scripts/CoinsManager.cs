@@ -4,7 +4,7 @@ public class CoinsManager : MonoBehaviour
 {
     [SerializeField] private int initialCoins;
     [SerializeField] private CoinsDisplay coinsDisplay;
-    public int upgradedClick;
+    public int clickPower;
     const string CoinsKey = "WALLET_COINS";
 
     public int Coins
@@ -32,7 +32,7 @@ public class CoinsManager : MonoBehaviour
         //os valores dos multiplicadores devem vir do json;
 
 
-        Coins = Mathf.Max(0, Coins + );
+        Coins = Coins + clickPower;
         coinsDisplay.UpdateCoins();
     }
 }

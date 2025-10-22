@@ -13,19 +13,13 @@ public class StoreItemDto
     public int price;
     public bool purchased;
     public Upgrade upgrade;
-
-    //UPGRADES
-    //public int upgradeType;
-    // 1 Autoclick mais rapido | 2 melhor potencia autoclick | 3 melhora click
-
-
-
 }
 
 public class Upgrade
 {
     public UpgradeKey key;
     public float value;
+    public bool isAutoclick;
 }
 
 public enum UpgradeKey

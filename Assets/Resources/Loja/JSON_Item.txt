@@ -8,7 +8,8 @@
 			"price": 20,
 			"purchased": false,
 			"prefabName": "Carpet",
-			"prefabpatch": "Loja/Prefabs/Decorations/Carpet"
+			"prefabpatch": "Loja/Prefabs/Decorations/Carpet",
+			"upgrade": {"key":"BetterClick", "value": 1, "isAutoclick": false}
 		},
 		
 		{
@@ -19,8 +20,8 @@
 			"price": 50,
 			"purchased": false,
 			"prefabName": "CowPlush",
-			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush"
-			"upgrade": {"key":"accumlation", "value": 0.1}
+			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush",
+			"upgrade": {"key":"FasterAutoclick", "value": 0.25, "isAutoclick": true}
 		},
 
 		{
@@ -31,7 +32,8 @@
 			"price": 100,
 			"purchased": false,
 			"prefabName": "Plant",
-			"prefabpatch": "Loja/Prefabs/Decorations/Plant"
+			"prefabpatch": "Loja/Prefabs/Decorations/Plant",
+			"upgrade": {"key":"BetterAutoclick", "value": 1, "isAutoclick": true}
 		}
 
 	]
