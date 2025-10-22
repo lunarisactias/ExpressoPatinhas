@@ -20,6 +20,7 @@
 			"purchased": false,
 			"prefabName": "CowPlush",
 			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush"
+			"upgrade": {"key":"accumlation", "value": 0.1}
 		},
 
 		{

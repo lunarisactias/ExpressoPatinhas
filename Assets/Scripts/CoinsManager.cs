@@ -4,6 +4,7 @@ public class CoinsManager : MonoBehaviour
 {
     [SerializeField] private int initialCoins;
     [SerializeField] private CoinsDisplay coinsDisplay;
+    public int upgradedClick;
     const string CoinsKey = "WALLET_COINS";
 
     public int Coins
@@ -22,9 +23,16 @@ public class CoinsManager : MonoBehaviour
     }
 
     // opcional: método para adicionar moedas (recompensas do jogo)
-    public void Add(int amount)
+    public void Add()
     {
-        Coins = Mathf.Max(0, Coins + amount);
+        //varivel que armazena o multiplicador. esse é permanete; salvo no playerPrefs.
+        //valor default das moedas = 1;
+        // valor de multiplicar. Ex, multiplador x2 = valor defailt x 2 = 2;
+        //mult 3x: 1 x 3 = 3
+        //os valores dos multiplicadores devem vir do json;
+
+
+        Coins = Mathf.Max(0, Coins + );
         coinsDisplay.UpdateCoins();
     }
 }
