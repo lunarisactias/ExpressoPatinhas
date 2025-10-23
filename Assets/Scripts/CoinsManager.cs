@@ -5,7 +5,23 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private int initialCoins;
     [SerializeField] private CoinsDisplay coinsDisplay;
     public int clickPower;
+    public bool autoClickerON = false;
+    public float initialAutoClickTimer = 2f;
+    private float autoClickTimer = 2f;
+    public int autoClickPower = 1;
     const string CoinsKey = "WALLET_COINS";
+
+    private void Update()
+    {
+        if(!autoClickerON)
+        {
+            return;
+        }
+        else
+        {
+            AutoClickerTimer();
+        }
+    }
 
     public int Coins
     {
@@ -25,14 +41,20 @@ public class CoinsManager : MonoBehaviour
     // opcional: método para adicionar moedas (recompensas do jogo)
     public void Add()
     {
-        //varivel que armazena o multiplicador. esse é permanete; salvo no playerPrefs.
-        //valor default das moedas = 1;
-        // valor de multiplicar. Ex, multiplador x2 = valor defailt x 2 = 2;
-        //mult 3x: 1 x 3 = 3
-        //os valores dos multiplicadores devem vir do json;
-
-
         Coins = Coins + clickPower;
         coinsDisplay.UpdateCoins();
+    }
+
+    public void AutoClickerTimer()
+    {
+        autoClickTimer -= Time.deltaTime;
+        if (autoClickTimer < 0) { AutoClick(); }
+    }
+
+    public void AutoClick()
+    {
+        Coins = Coins + autoClickPower;
+        coinsDisplay.UpdateCoins();
+        autoClickTimer = initialAutoClickTimer;
     }
 }

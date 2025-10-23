@@ -39,13 +39,24 @@ public class StoreManager : MonoBehaviour
             if (prefab != null) Instantiate(prefab, decoParent);
         }
 
-        //switch (item.upgrade.key)
-        //{
-        //    case UpgradeKey.BetterClick:
-        //        int valueInt = (int)item.upgrade.value;
-        //        coinsManager.clickPower += valueInt;
-        //        break;
-        //}
+        switch (item.key)
+        {
+            case "BetterClick"://case UpgradeKey.BetterClick:
+                int clickValueInt = (int)item.value;
+                coinsManager.clickPower += clickValueInt;
+                break;
+
+            case "FasterAutoclick":
+                coinsManager.initialAutoClickTimer -= item.value;
+                coinsManager.autoClickerON = true;
+                break;
+
+            case "BetterAutoclick":
+                int autoClickvalueInt = (int)item.value;
+                coinsManager.autoClickerON = true;
+                coinsManager.autoClickPower += autoClickvalueInt;
+                break;
+        }
 
         OnPurchaseSucceeded?.Invoke(item);
     }

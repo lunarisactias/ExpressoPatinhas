@@ -12,21 +12,8 @@ public class StoreItemDto
     public string prefabpatch;
     public int price;
     public bool purchased;
-    public Upgrade upgrade;
-}
-
-public class Upgrade
-{
-    public UpgradeKey key;
+    public string key;
     public float value;
-    public bool isAutoclick;
-}
-
-public enum UpgradeKey
-{
-    BetterAutoclick,
-    FasterAutoclick,
-    BetterClick
 }
 
     [Serializable]
