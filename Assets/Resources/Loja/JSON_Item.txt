@@ -22,8 +22,8 @@
 			"purchased": false,
 			"prefabName": "CowPlush",
 			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush",
-			"key":"FasterAutoclick",
-			"value": 0.25
+			"key":"ActivateAutoclick",
+			"value": 0
 		},
 
 		{

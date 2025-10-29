@@ -43,18 +43,20 @@ public class StoreManager : MonoBehaviour
         {
             case "BetterClick"://case UpgradeKey.BetterClick:
                 int clickValueInt = (int)item.value;
-                coinsManager.clickPower += clickValueInt;
+                coinsManager.ClickPower += clickValueInt;
+                break;
+
+            case "ActivateAutoclick":
+                coinsManager.autoClickON = true;
                 break;
 
             case "FasterAutoclick":
-                coinsManager.initialAutoClickTimer -= item.value;
-                coinsManager.autoClickerON = true;
+                coinsManager.AutoClickTimerStart -= item.value;
                 break;
 
             case "BetterAutoclick":
                 int autoClickvalueInt = (int)item.value;
-                coinsManager.autoClickerON = true;
-                coinsManager.autoClickPower += autoClickvalueInt;
+                coinsManager.AutoClickPower += autoClickvalueInt;
                 break;
         }
 

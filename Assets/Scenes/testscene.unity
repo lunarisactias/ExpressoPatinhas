@@ -1645,10 +1645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialCoins: 0
   coinsDisplay: {fileID: 1371194604}
-  clickPower: 1
-  autoClickerON: 0
-  initialAutoClickTimer: 2
-  autoClickPower: 1
+  autoClickON: 0
 --- !u!114 &530486427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,7 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonResourcePath: Loja/JSON_Item
-  clearOnStart: 1
+  clearOnStart: 0
 --- !u!114 &530486428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3f0b4f37dd60b4aa14960c37f580b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearOnStart: 1
+  clearOnStart: 0
 --- !u!4 &530486430
 Transform:
   m_ObjectHideFlags: 0
