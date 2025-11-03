@@ -1,6 +1,6 @@
 using NUnit.Framework.Constraints;
 using System;
-using System.
+using System.Threading;
 using UnityEngine;
 
 public class CoinsManager : MonoBehaviour
@@ -9,7 +9,6 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private CoinsDisplay coinsDisplay;
     //public float initialAutoClickTimer /*{ get => PlayerPrefs.GetFloat(AutoClickSpeedKey); set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value)} } */= 4f;
     private float autoClickTimer = 4f;
-    //public int autoClickPower = 1;
     const string CoinsKey = "WALLET_COINS";
     const string ClickKey = "CLICK_POWER";
     const string AutoClickKey = "AUTO_CLICK_ACTIVATED";
@@ -18,7 +17,7 @@ public class CoinsManager : MonoBehaviour
 
     private void Update()
     {
-        if (!autoClickON)
+        if (AutoClickON != 1)
         {
             return;
         }
@@ -29,13 +28,11 @@ public class CoinsManager : MonoBehaviour
     }
 
     #region variaveis pt 2
-
-    public bool AutoClick 
+    public int AutoClickON
     {
-        get => PlayerPrefs.GetString();
-        set;
+        get => PlayerPrefs.GetInt(AutoClickKey);
+        set { PlayerPrefs.SetInt(AutoClickKey, value); PlayerPrefs.Save(); }
     }
-
     public float AutoClickTimerStart
     {
         get => 4 - PlayerPrefs.GetFloat(AutoClickSpeedKey);

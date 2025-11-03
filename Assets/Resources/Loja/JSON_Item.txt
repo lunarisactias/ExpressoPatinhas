@@ -23,7 +23,7 @@
 			"prefabName": "CowPlush",
 			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush",
 			"key":"ActivateAutoclick",
-			"value": 0
+			"value": 1
 		},
 
 		{

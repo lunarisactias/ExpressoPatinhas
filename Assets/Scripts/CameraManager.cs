@@ -5,7 +5,7 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private Transform[] cameraPoints;
     [SerializeField] private float moveSpeed = 5f;
-    public int currentPointIndex = 2;
+    public int currentPointIndex = 1;
     private Rigidbody2D rb;
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
@@ -16,7 +16,7 @@ public class CameraManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.MovePosition(cameraPoints[2].position);
+        rb.MovePosition(cameraPoints[1].position);
     }
 
     void Update()
@@ -53,7 +53,7 @@ public class CameraManager : MonoBehaviour
         Swipe();
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.x > endTouchPosition.x + swipeThreshold)
         {
-            if (currentPointIndex < 4) currentPointIndex += 1;
+            if (currentPointIndex < 2) currentPointIndex += 1;
             StopAllCoroutines();
             StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
         }

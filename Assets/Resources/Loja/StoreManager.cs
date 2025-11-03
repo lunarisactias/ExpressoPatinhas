@@ -47,7 +47,8 @@ public class StoreManager : MonoBehaviour
                 break;
 
             case "ActivateAutoclick":
-                coinsManager.autoClickON = true;
+                int autoClickOnValueInt = (int)item.value;
+                coinsManager.AutoClickON = autoClickOnValueInt;
                 break;
 
             case "FasterAutoclick":
