@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private int minimumSlots;
     [SerializeField] private List<SlotClass> items = new List<SlotClass>();
     private GameObject[] slots;
+    private Vector2 touchPosition;
 
     private void Start()
     {
@@ -30,8 +31,14 @@ public class InventoryManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            RemoveItem(itemsToAdd[Random.Range(0, itemsToAdd.Length)]);
+            ItemClass itemToRemove = itemsToAdd[Random.Range(0, itemsToAdd.Length)];
+            if (itemToRemove != null) 
+            {
+                RemoveItem(itemToRemove);
+            }
         }
+
+        SpawnItem();
     }
 
     public void RefreshUI()
@@ -50,8 +57,8 @@ public class InventoryManager : MonoBehaviour
                 {
                     slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().enabled = false;
                     slots[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = null;
+                    slots[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
                 }
-                slots[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "";
             }
         }
     }
@@ -104,6 +111,11 @@ public class InventoryManager : MonoBehaviour
                     }
                 }
 
+                if (items.Count >= minimumSlots && slotsHolder.transform.childCount > minimumSlots)
+                {
+                    Destroy(slotsHolder.transform.GetChild(slotsHolder.transform.childCount - 1).gameObject);
+                }
+
                 items.Remove(slotToRemove);
             }
         }
@@ -111,13 +123,56 @@ public class InventoryManager : MonoBehaviour
         {
             return false;
         }
-        if (items.Count >= minimumSlots && slotsHolder.transform.childCount > minimumSlots)
-        {
-            Destroy(slotsHolder.transform.GetChild(slotsHolder.transform.childCount - 1).gameObject);
-        }
 
         RefreshUI();
         return true;
+    }
+
+    public void SpawnItem()
+    {
+        GameObject itemToSpawn;
+
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+            SlotClass slotWithItem = GetClosestSlot();
+            Vector2 slotPosition;
+
+            int i = items.IndexOf(slotWithItem);
+            if (i >= 0)
+            {
+                slotPosition = slots[i].transform.position;
+            }
+            else
+            {
+                slotPosition = Vector2.zero;
+            }
+
+            if (touch.phase == TouchPhase.Began && Vector2.Distance(touchPosition, slotPosition) <= 1.5f)
+            {
+                itemToSpawn = slotWithItem.GetItem().itemPrefab;
+
+                if (itemToSpawn != null)
+                {
+                    GameObject spawnedItem = Instantiate(itemToSpawn, Vector2.zero, Quaternion.identity);
+                    RemoveItem(slotWithItem.GetItem());
+                }
+            }
+        }
+    }
+    
+    public SlotClass GetClosestSlot()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (Vector2.Distance(slots[i].transform.position, touchPosition) <= 0.3f)
+            {
+                Debug.Log(items[i].GetItem().itemName);
+                return items[i];
+            }
+        }
+        return null;
     }
 
     public SlotClass ContainsItem(ItemClass item)

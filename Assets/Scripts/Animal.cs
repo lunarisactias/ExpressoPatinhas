@@ -37,6 +37,7 @@ public class Animal : MonoBehaviour
     private float hungerRate;
     private float happinessRate;
     private Rigidbody2D rb;
+    private Vector2 newPos;
 
     public enum Species
     {
@@ -80,6 +81,8 @@ public class Animal : MonoBehaviour
         AnimalHUD();
         Hunger();
         ClampStats();
+        ClampMovement();
+        FlipImage();
     }
 
     IEnumerator MoveRandomly()
@@ -88,14 +91,37 @@ public class Animal : MonoBehaviour
         {
             Debug.Log("Iniciando movimento aleatório");
 
-            Vector2 newPos = new Vector2(
+            newPos = new Vector2(
                 UnityEngine.Random.Range(movementArea.bounds.min.x, movementArea.bounds.max.x),
                 UnityEngine.Random.Range(movementArea.bounds.min.y, movementArea.bounds.max.y)
             );
 
-            rb.MovePosition(Vector2.MoveTowards(rb.position, newPos, moveSpeed * Time.deltaTime));
+            Vector2 direction = (newPos - rb.position).normalized;
+            rb.linearVelocity = direction * moveSpeed;
 
-            yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 2f));
+            //rb.MovePosition(Vector2.MoveTowards(rb.position, newPos, moveSpeed));
+
+            yield return new WaitForSeconds(UnityEngine.Random.Range(4f, 20f));
+        }
+    }
+
+    public void ClampMovement()
+    {
+        if (Vector2.Distance (rb.position, newPos) < 0.1f)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+    }
+
+    public void FlipImage()
+    {
+        if (rb.linearVelocity.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (rb.linearVelocity.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 

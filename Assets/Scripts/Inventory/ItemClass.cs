@@ -5,7 +5,8 @@ public abstract class ItemClass : ScriptableObject
     [Header("Item Properties")]
     public string itemName;
     public Sprite itemIcon;
-    public int maxStack = 99;
+    public GameObject itemPrefab;
+    public int maxStack = 999;
 
     public abstract ItemClass GetItem();
     public abstract ToyClass GetToy();

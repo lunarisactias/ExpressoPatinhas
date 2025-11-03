@@ -456,7 +456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a36f0ff3a9c1ce47b332d59a0a8bc4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1314,7 +1314,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.008623362, y: -0.8106153}
+  m_Offset: {x: 0.010623932, y: -0.44491696}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1324,7 +1324,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.275787, y: 4.3787694}
+  m_Size: {x: 4.659874, y: 3.6473727}
   m_EdgeRadius: 0
 --- !u!4 &1099068203
 Transform:
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   nameText: {fileID: 1936019004}
   timeInSecondsToHungerFull: 86400
   timeInSecondToHappinessEmpty: 14400
-  moveSpeed: 2
+  moveSpeed: 0.5
   movementArea: {fileID: 1099068202}
 --- !u!212 &1386916030
 SpriteRenderer:
@@ -2338,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 9fa3e00dac0988d4d89db8f80ff887b6, type: 3}
     - target: {fileID: 7989833029248498324, guid: 9670bfebe7f37804a844c152464cfefa, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -660,14 +660,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToAdd:
   - {fileID: 11400000, guid: 8a25bfae710e5844e8aeeae2fcbdef34, type: 2}
-  - {fileID: 11400000, guid: 5912d0dc0f0bb8048a154d68ef2e1932, type: 2}
   - {fileID: 11400000, guid: ff3505dff430f11428942cbda5378fb0, type: 2}
+  - {fileID: 11400000, guid: 5912d0dc0f0bb8048a154d68ef2e1932, type: 2}
   - {fileID: 11400000, guid: 1299d54b380203849adcf32f39fc1fca, type: 2}
   - {fileID: 11400000, guid: 90c6fc896709a684dba30c8006b742ca, type: 2}
   - {fileID: 11400000, guid: 23f51f7a8ba7b0045be2ae31bbd1d5e3, type: 2}
   - {fileID: 11400000, guid: 0f28f5c893a4c564baa76aadd2a76f36, type: 2}
   - {fileID: 11400000, guid: 4ae843ecaeee4d14390bab5fc55db5b5, type: 2}
   - {fileID: 11400000, guid: 52509e9609cd0524c9759ad99c42aaf6, type: 2}
+  - {fileID: 11400000, guid: 128f3b673507d5b43b96b5b2a96724a5, type: 2}
+  - {fileID: 11400000, guid: 42ee019102bb32f4b850ae797ee18b5d, type: 2}
+  - {fileID: 11400000, guid: 3dfbdacb0e250994b9130b99f5fafc5b, type: 2}
   slotPrefab: {fileID: 3972810379903467576, guid: 0ce977f6afa86b64ca4a3e728b0cdf96, type: 3}
   slotsHolder: {fileID: 1171305301}
   minimumSlots: 8
@@ -2053,6 +2056,10 @@ PrefabInstance:
     - target: {fileID: 4386597049926020576, guid: 0ce977f6afa86b64ca4a3e728b0cdf96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6642551637018083597, guid: 0ce977f6afa86b64ca4a3e728b0cdf96, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
