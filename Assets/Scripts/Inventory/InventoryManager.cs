@@ -155,7 +155,8 @@ public class InventoryManager : MonoBehaviour
 
                 if (itemToSpawn != null)
                 {
-                    GameObject spawnedItem = Instantiate(itemToSpawn, Vector2.zero, Quaternion.identity);
+                    Vector3 spawnLocation = new Vector3(0f, 3.5f, 0f);
+                    GameObject spawnedItem = Instantiate(itemToSpawn, spawnLocation, Quaternion.identity);
                     RemoveItem(slotWithItem.GetItem());
                 }
             }
