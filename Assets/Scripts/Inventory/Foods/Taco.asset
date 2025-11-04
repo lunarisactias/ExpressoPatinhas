@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9222dcc7a63709d4c99894fb5053be90, type: 3}
+  m_Name: Taco
+  m_EditorClassIdentifier: 
+  itemName: Taco
+  itemIcon: {fileID: 21300000, guid: cd43343c457c88c43b108eed36033b62, type: 3}
+  itemPrefab: {fileID: 6262366194206564305, guid: a984ffc9eccb92349a7c7ca074cbd9d4, type: 3}
+  maxStack: 99
+  nutritionValue: 20

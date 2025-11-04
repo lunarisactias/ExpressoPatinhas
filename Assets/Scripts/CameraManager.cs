@@ -18,6 +18,8 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+
         if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged)
         {
             return;
@@ -26,8 +28,6 @@ public class CameraManager : MonoBehaviour
         {
             MoveCamera();
         }
-
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
     }
 
     private void MoveCamera()

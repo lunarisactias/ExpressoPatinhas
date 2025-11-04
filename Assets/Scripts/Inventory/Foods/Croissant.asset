@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9222dcc7a63709d4c99894fb5053be90, type: 3}
+  m_Name: Croissant
+  m_EditorClassIdentifier: 
+  itemName: Croissant
+  itemIcon: {fileID: 21300000, guid: e5082749b295fff4e9d3efbb4bc8e0c4, type: 3}
+  itemPrefab: {fileID: 6262366194206564305, guid: 888c228d34a4954489994757be2f5e73, type: 3}
+  maxStack: 99
+  nutritionValue: 20
