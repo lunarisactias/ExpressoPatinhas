@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0a36f0ff3a9c1ce47b332d59a0a8bc4a
+guid: ecc5b0598e1cf0a4d84b7b771ae7999a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5163889207892149997
-    second: d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0
+      213: 1518853509925919832
+    second: Planta_Teto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 0
-=======
     filterMode: 1
->>>>>>> Ricardo
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,20 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> Ricardo
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 40
-=======
   spritePixelsToUnits: 100
->>>>>>> Ricardo
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,11 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 0
-=======
     textureCompression: 1
->>>>>>> Ricardo
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0
+      name: Planta_Teto_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 11
-        width: 269
-        height: 366
+        x: 883
+        y: 1451
+        width: 197
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3197d18ff1e2658b0800000000000000
-      internalID: -5163889207892149997
+      spriteID: 85c5df4583d041510800000000000000
+      internalID: 1518853509925919832
       vertices: []
       indices: 
       edges: []
@@ -154,11 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 5e97eb03825dee720800000000000000
-=======
     spriteID: 
->>>>>>> Ricardo
     internalID: 0
     vertices: []
     indices: 
@@ -168,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0: -5163889207892149997
+      Planta_Teto_0: 1518853509925919832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

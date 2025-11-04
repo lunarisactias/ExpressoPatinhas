@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0a36f0ff3a9c1ce47b332d59a0a8bc4a
+guid: 8b0ac6634b47b7b4ead30351b524e15f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5163889207892149997
-    second: d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0
+      213: -793243234124893956
+    second: Planta_1_0
+  - first:
+      213: -581036305514340408
+    second: Planta_1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,11 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 0
-=======
     filterMode: 1
->>>>>>> Ricardo
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,20 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> Ricardo
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 40
-=======
   spritePixelsToUnits: 100
->>>>>>> Ricardo
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,11 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 0
-=======
     textureCompression: 1
->>>>>>> Ricardo
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0
+      name: Planta_1_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 11
-        width: 269
-        height: 366
+        x: 0
+        y: 1446
+        width: 153
+        height: 474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3197d18ff1e2658b0800000000000000
-      internalID: -5163889207892149997
+      spriteID: cf0f0893b75ddf4f0800000000000000
+      internalID: -793243234124893956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planta_1_1
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1451
+        width: 197
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf56300f8ebfe7f0800000000000000
+      internalID: -581036305514340408
       vertices: []
       indices: 
       edges: []
@@ -154,11 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 5e97eb03825dee720800000000000000
-=======
     spriteID: 
->>>>>>> Ricardo
     internalID: 0
     vertices: []
     indices: 
@@ -168,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      d6a800ad9d10deb6a4555fd4c32dbf1b-removebg-preview_0: -5163889207892149997
+      Planta_1_0: -793243234124893956
+      Planta_1_1: -581036305514340408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
