@@ -3,6 +3,8 @@ using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.ComponentModel;
+using System.Collections;
 
 public class Animal : MonoBehaviour
 {
@@ -10,8 +12,8 @@ public class Animal : MonoBehaviour
     public string uniqueId;
     [SerializeField] private string animalName;
     [SerializeField] private int age;
-    [SerializeField] private string species;
-    [SerializeField] private string color;
+    [SerializeField] private Species specie;
+    [SerializeField] private Colors color;
 
     [Header("Animal Stats")]
     [Range(0f, 100f)]
@@ -34,13 +36,44 @@ public class Animal : MonoBehaviour
 
     private float hungerRate;
     private float happinessRate;
+    private Rigidbody2D rb;
+    private Vector2 newPos;
+
+    public enum Species
+    {
+        Gato,
+        Cachorro,
+        Cabra,
+        Galinha,
+        Ouriço,
+        Guaxinim,
+        Lontra,
+        [Description("Panda Vermelho")]
+        Panda_Vermelho,
+        Carpa,
+        Coelhinho,
+        Veado
+    }
+
+    public enum Colors
+    {
+        Branco,
+        Preto,
+        Cinza,
+        Marrom,
+        Laranja,
+        Rajado,
+        Misturado
+    }
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         hungerRate = 100f / timeInSecondsToHungerFull;
         happinessRate = 100f / timeInSecondToHappinessEmpty;
         nameText.text = animalName;
         LoadData();
+        StartCoroutine(MoveRandomly());
     }
 
     private void Update()
@@ -48,7 +81,50 @@ public class Animal : MonoBehaviour
         AnimalHUD();
         Hunger();
         ClampStats();
+        ClampMovement();
+        FlipImage();
     }
+
+    IEnumerator MoveRandomly()
+    {
+        while (true)
+        {
+            Debug.Log("Iniciando movimento aleatório");
+
+            newPos = new Vector2(
+                UnityEngine.Random.Range(movementArea.bounds.min.x, movementArea.bounds.max.x),
+                UnityEngine.Random.Range(movementArea.bounds.min.y, movementArea.bounds.max.y)
+            );
+
+            Vector2 direction = (newPos - rb.position).normalized;
+            rb.linearVelocity = direction * moveSpeed;
+
+            //rb.MovePosition(Vector2.MoveTowards(rb.position, newPos, moveSpeed));
+
+            yield return new WaitForSeconds(UnityEngine.Random.Range(4f, 20f));
+        }
+    }
+
+    public void ClampMovement()
+    {
+        if (Vector2.Distance (rb.position, newPos) < 0.1f)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+    }
+
+    public void FlipImage()
+    {
+        if (rb.linearVelocity.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (rb.linearVelocity.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+    }
+
     public void FeedAnimal(float foodAmount)
     {
         hunger -= foodAmount;

@@ -29,6 +29,8 @@ public class CameraManager : MonoBehaviour
         {
             MoveCamera();
         }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
     }
 
     private void MoveCamera()
@@ -92,6 +94,4 @@ public class CameraManager : MonoBehaviour
         }
 
     }
-
-    
 }
