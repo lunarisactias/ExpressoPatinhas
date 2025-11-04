@@ -7,6 +7,7 @@ TagManager:
   - Animal
   - Food
   - Toy
+  - Decoracao
   layers:
   - Default
   - TransparentFX

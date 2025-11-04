@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb6bb7218fb3aca48b96851cc76cce1b
+guid: 2113239e8b3731c4fa50cd6abe256d1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -304956245587001104
-    second: 2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0
+      213: 5808698085106149533
+    second: Cenario_Base_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0
+      name: Cenario_Base_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 900
-        height: 1600
+        width: 1080
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f000cd09e394cbf0800000000000000
-      internalID: -304956245587001104
+      spriteID: d986e32f124ac9050800000000000000
+      internalID: 5808698085106149533
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2452a6da-b0e0-41fa-902f-b6b82fa3f8fe_0: -304956245587001104
+      Cenario_Base_0: 5808698085106149533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
