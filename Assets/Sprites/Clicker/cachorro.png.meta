@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cachorro_0: 7139849577753286379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
