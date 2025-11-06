@@ -5,19 +5,24 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private Transform[] cameraPoints;
     [SerializeField] private float moveSpeed = 5f;
-    public int currentPointIndex = 2;
+    public int currentPointIndex = 1;
     private Rigidbody2D rb;
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
 
+    [Header("LOJA")]
+    public bool storeOpen;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.MovePosition(cameraPoints[2].position);
+        rb.MovePosition(cameraPoints[1].position);
     }
 
     void Update()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+
         if (Food.instance.isBeingDragged || Toy.instance.isBeingDragged)
         {
             return;
@@ -30,6 +35,7 @@ public class CameraManager : MonoBehaviour
 
     private void MoveCamera()
     {
+        MoveCameraUp();
         MoveCameraLeft();
         MoveCameraRight();
     }
@@ -49,9 +55,19 @@ public class CameraManager : MonoBehaviour
         Swipe();
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.x > endTouchPosition.x + swipeThreshold)
         {
-            if (currentPointIndex < 4) currentPointIndex += 1;
+            if (currentPointIndex < 2) currentPointIndex += 1;
             StopAllCoroutines();
             StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
+        }
+    }
+
+    public void MoveCameraUp()
+    {
+        Swipe();
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended && startTouchPosition.y < endTouchPosition.y - swipeThreshold)
+        {
+            storeOpen = true;
+            //StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
         }
     }
 
@@ -78,6 +94,4 @@ public class CameraManager : MonoBehaviour
         }
 
     }
-
-    
 }

@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
     public GameObject clicker;
     public GameObject loja;
     public GameObject trem;
+    public GameObject inventory;
 
     void Start()
     {
@@ -41,7 +42,6 @@ public class HUDManager : MonoBehaviour
                 break;
         }
     }
-
     void Desejos()
     {
         desejo.SetActive(true);
