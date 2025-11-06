@@ -19,7 +19,6 @@ public class StoreModalController : MonoBehaviour
     [Header("UI - Modal da Store")]
     [SerializeField] private GameObject storeModalPanel;
     [SerializeField] private Button closeModalBtn;
-    [SerializeField] private TMP_Text modalTitleText;
 
     [Header("UI - Lista")]
     [SerializeField] private ScrollRect itemsScroll;
@@ -66,7 +65,6 @@ public class StoreModalController : MonoBehaviour
 
     private void ShowStore()
     {
-        modalTitleText.text = "Store";
         storeModalPanel.SetActive(true);
     }
 
