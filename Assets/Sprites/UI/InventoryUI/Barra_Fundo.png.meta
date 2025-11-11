@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e51fc9dbb7c82e4483c870f24a04f25
+guid: a4e0869d369ef204fbf3f788c12f6a9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8450382061353454801
-    second: HUD - Loja Fundo_0
+      213: 6438636447001710643
+    second: Barra_Fundo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD - Loja Fundo_0
+      name: Barra_Fundo_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 0
-        width: 1080
-        height: 1633
+        width: 3078
+        height: 373
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1dc4e4776b9c54570800000000000000
-      internalID: 8450382061353454801
+      spriteID: 3309b653cb1aa5950800000000000000
+      internalID: 6438636447001710643
       vertices: []
       indices: 
       edges: []

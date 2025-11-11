@@ -7,6 +7,8 @@ public class CoinsManager : MonoBehaviour
 {
     [SerializeField] private int initialCoins;
     [SerializeField] private CoinsDisplay coinsDisplay;
+    [SerializeField] private GameObject amountPrefab;
+    [SerializeField] private Transform canvasParent;
     //public float initialAutoClickTimer /*{ get => PlayerPrefs.GetFloat(AutoClickSpeedKey); set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value)} } */= 4f;
     private float autoClickTimer = 4f;
     const string CoinsKey = "WALLET_COINS";
@@ -73,6 +75,9 @@ public class CoinsManager : MonoBehaviour
     {
         Coins = Coins + 1 + ClickPower;
         coinsDisplay.UpdateCoins();
+
+        Vector2 clickPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+        Instantiate(amountPrefab, clickPos, Quaternion.identity, canvasParent);
     }
 
     public void AutoClickerTimer()

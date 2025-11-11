@@ -7,10 +7,17 @@ public class StoreManager : MonoBehaviour
     public static event Action<StoreItemDto> OnPurchaseSucceeded;
     public static event Action<StoreItemDto, string> OnPurchaseFailed;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip purchaseSound;
+
     [SerializeField] private CoinsManager coinsManager;
     [SerializeField] private StoreDatabase storeDB;
     [SerializeField] private Transform decoParent;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void TryPurchase(StoreItemDto item)
     {
 
@@ -31,6 +38,7 @@ public class StoreManager : MonoBehaviour
 
         storeDB.SavePurchase(item.id);
         item.purchased = true;
+        audioSource.PlayOneShot(purchaseSound);
 
 
         if (!string.IsNullOrEmpty(item.prefabpatch))
