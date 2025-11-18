@@ -27,8 +27,11 @@ public class StoreModalController : MonoBehaviour
 
     [Header("UI - Feedback")]
     [SerializeField] private GameObject feedbackModalPanel;
-    [SerializeField] private TMP_Text feedbackTitleText;
-    [SerializeField] private TMP_Text feedbackMessageText;
+    //[SerializeField] private TMP_Text feedbackTitleText;
+    //[SerializeField] private TMP_Text feedbackMessageText;
+    [SerializeField] private Image window;
+    [SerializeField] private Sprite successImage;
+    [SerializeField] private Sprite failureImage;
     [SerializeField] private Button closeFeedbackBtn;
 
     private void Update()
@@ -107,18 +110,14 @@ public class StoreModalController : MonoBehaviour
     private void OnPurchaseSucceeded(StoreItemDto item)
     {
         RefreshList();
-        ShowFeedback("Sucesso", $"Compra de \"{item.name}\" realizada.");
+        window.sprite = successImage;
+        feedbackModalPanel.SetActive(true);
+
     }
 
-    private void OnPurchaseFailed(StoreItemDto item, string reason)
+    private void OnPurchaseFailed(StoreItemDto item)
     {
-        ShowFeedback("Falha", reason);
-    }
-
-    private void ShowFeedback(string title, string msg)
-    {
-        feedbackTitleText.text = title;
-        feedbackMessageText.text = msg;
+        window.sprite = failureImage;
         feedbackModalPanel.SetActive(true);
     }
 

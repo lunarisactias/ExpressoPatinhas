@@ -5,10 +5,11 @@ using static UnityEditor.Progress;
 public class StoreManager : MonoBehaviour
 {
     public static event Action<StoreItemDto> OnPurchaseSucceeded;
-    public static event Action<StoreItemDto, string> OnPurchaseFailed;
+    public static event Action<StoreItemDto> OnPurchaseFailed;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip purchaseSound;
+    [SerializeField] private Material[] backgroundImages;
 
     [SerializeField] private CoinsManager coinsManager;
     [SerializeField] private StoreDatabase storeDB;
@@ -21,18 +22,18 @@ public class StoreManager : MonoBehaviour
     public void TryPurchase(StoreItemDto item)
     {
 
-        if (item == null) { OnPurchaseFailed?.Invoke(item, "item invalido"); return;}
-        if (item.purchased) { OnPurchaseFailed?.Invoke(item, "item já comprado"); return;}
+        if (item == null) { OnPurchaseFailed?.Invoke(item); return;}
+        if (item.purchased) { OnPurchaseFailed?.Invoke(item); return;}
 
         if (!coinsManager.canAfford(item.price))
         {
-            OnPurchaseFailed?.Invoke(item, "Moedas insuficientes");
+            OnPurchaseFailed?.Invoke(item);
             return;
         }
 
         if (!coinsManager.TryDebit(item.price))
         {
-            OnPurchaseFailed?.Invoke(item, "Falha ao debitar moedas.");
+            OnPurchaseFailed?.Invoke(item);
             return;
         }
 
@@ -49,6 +50,19 @@ public class StoreManager : MonoBehaviour
 
         switch (item.key)
         {
+            case "ChangeBackgroundImage":
+                int clickValueInt2 = (int)item.value;
+                coinsManager.ClickPower += clickValueInt2;
+
+
+                GameObject clickerScene = GameObject.Find("Background Clicker");
+
+                MeshRenderer clickerMeshRen = clickerScene.GetComponent<MeshRenderer>();
+
+                int backgroundInt = (int)item.value2;
+                clickerMeshRen.material = backgroundImages[backgroundInt];
+                break;
+
             case "BetterClick"://case UpgradeKey.BetterClick:
                 int clickValueInt = (int)item.value;
                 coinsManager.ClickPower += clickValueInt;
