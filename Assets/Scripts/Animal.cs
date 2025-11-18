@@ -33,6 +33,7 @@ public class Animal : MonoBehaviour
     [Header("Animal Movement")]
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private Collider2D movementArea;
+    [SerializeField] private Animator anim;
 
     private float hungerRate;
     private float happinessRate;
@@ -69,6 +70,7 @@ public class Animal : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         hungerRate = 100f / timeInSecondsToHungerFull;
         happinessRate = 100f / timeInSecondToHappinessEmpty;
         nameText.text = animalName;
@@ -87,6 +89,7 @@ public class Animal : MonoBehaviour
 
     IEnumerator MoveRandomly()
     {
+
         while (true)
         {
             Debug.Log("Iniciando movimento aleatório");
@@ -98,6 +101,7 @@ public class Animal : MonoBehaviour
 
             Vector2 direction = (newPos - rb.position).normalized;
             rb.linearVelocity = direction * moveSpeed;
+            anim.SetBool("Walking", true);
 
             //rb.MovePosition(Vector2.MoveTowards(rb.position, newPos, moveSpeed));
 
@@ -110,6 +114,7 @@ public class Animal : MonoBehaviour
         if (Vector2.Distance (rb.position, newPos) < 0.1f)
         {
             rb.linearVelocity = Vector2.zero;
+            anim.SetBool("Walking", false);
         }
     }
 

@@ -14,6 +14,7 @@ public class StoreItemDto
     public bool purchased;
     public string key;
     public float value;
+    public float value2;
 }
 
     [Serializable]

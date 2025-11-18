@@ -23,7 +23,7 @@ public class StoreItemView : MonoBehaviour
 
         nameText.text = item.name;
         descText.text = item.descricao;
-        priceText.text = $"Cost: {item.price}";
+        priceText.text = $"Custo: {item.price}";
 
         // Carrega sprite do Resources
         var sprite = Resources.Load<Sprite>(item.imagepatch);
