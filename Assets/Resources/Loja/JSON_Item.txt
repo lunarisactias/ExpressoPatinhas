@@ -19,7 +19,7 @@
 			"imagepatch": "Loja/Sprites/Tier1/Toy",
 			"price": 40,
 			"purchased": false,
-			"prefabName": "CowPlush",
+			"prefabName": "Toy1",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Toy",
 			"key":"BetterClick",
 			"value": 1
@@ -32,11 +32,26 @@
 			"imagepatch": "Loja/Sprites/Tier1/Carpet",
 			"price": 50,
 			"purchased": false,
-			"prefabName": "Plant",
+			"prefabName": "Plant1",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Carpet",
 			"key":"ActivateAutoclick",
 			"value": 1
+		},
+
+		{
+			"id": "4",
+			"name": "Tapete 1",
+			"descricao": "Ativa o click automatico",
+			"imagepatch": "Loja/Sprites/Tier1/Frame",
+			"price": 100,
+			"purchased": false,
+			"prefabName": "Frame1",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Frame",
+			"key":"BetterClick",
+			"value": 2
 		}
+
+
 
 	]
 }
