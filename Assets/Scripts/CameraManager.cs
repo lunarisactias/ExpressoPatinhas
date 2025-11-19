@@ -9,6 +9,8 @@ public class CameraManager : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 startTouchPosition, endTouchPosition;
     [SerializeField] private float swipeThreshold;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip openDoorClip;
 
     [Header("LOJA")]
     public bool storeOpen;
@@ -17,6 +19,7 @@ public class CameraManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.MovePosition(cameraPoints[1].position);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class CameraManager : MonoBehaviour
             if (currentPointIndex > 0) currentPointIndex -= 1;
             StopAllCoroutines();
             StartCoroutine(MoveToPosition(gameObject, cameraPoints[currentPointIndex].position, moveSpeed));
+            if(currentPointIndex == 0) { audioSource.PlayOneShot(openDoorClip); }
         }
     }
 

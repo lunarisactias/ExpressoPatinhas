@@ -2,42 +2,56 @@
 	"item": [
 		{
 			"id": "1",
-			"name": "Tapete",
-			"descricao": "Melhora a quantidade de carinho recebido em 1",
-			"imagepatch": "Loja/Sprites/Carpet",
+			"name": "Parede & Chao 1",
+			"descricao": "Melhora o carinho por click em 1",
+			"imagepatch": "Loja/Sprites/Tier1/Background",
 			"price": 20,
 			"purchased": false,
-			"prefabName": "Carpet",
-			"prefabpatch": "Loja/Prefabs/Decorations/Carpet",
-			"key":"BetterClick",
-			"value": 1
+			"key":"ChangeBackgroundImage",
+			"value": 1,
+			"value2": 1
 		},
 		
 		{
 			"id": "2",
-			"name": "Pelucia de vaca",
-			"descricao": "CARINHO AUTOMATICO, aumenta a velocidade em 0.25s",
-			"imagepatch": "Loja/Sprites/CowPlush",
-			"price": 50,
+			"name": "Brinquedo 1",
+			"descricao": "Melhora o carinho por click em 1",
+			"imagepatch": "Loja/Sprites/Tier1/Toy",
+			"price": 40,
 			"purchased": false,
-			"prefabName": "CowPlush",
-			"prefabpatch": "Loja/Prefabs/Decorations/CowPlush",
-			"key":"ActivateAutoclick",
+			"prefabName": "Toy1",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Toy",
+			"key":"BetterClick",
 			"value": 1
 		},
 
 		{
 			"id": "3",
-			"name": "Planta",
-			"descricao": "CARINHO AUTOMATICO, aumenta a potencia em 1",
-			"imagepatch": "Loja/Sprites/Plant",
+			"name": "Tapete 1",
+			"descricao": "Ativa o click automatico",
+			"imagepatch": "Loja/Sprites/Tier1/Carpet",
+			"price": 50,
+			"purchased": false,
+			"prefabName": "Plant1",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Carpet",
+			"key":"ActivateAutoclick",
+			"value": 1
+		},
+
+		{
+			"id": "4",
+			"name": "Tapete 1",
+			"descricao": "Ativa o click automatico",
+			"imagepatch": "Loja/Sprites/Tier1/Frame",
 			"price": 100,
 			"purchased": false,
-			"prefabName": "Plant",
-			"prefabpatch": "Loja/Prefabs/Decorations/Plant",
-			"key":"BetterAutoclick",
-			"value": 1
+			"prefabName": "Frame1",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Frame",
+			"key":"BetterClick",
+			"value": 2
 		}
+
+
 
 	]
 }
