@@ -39,6 +39,8 @@ public class Animal : MonoBehaviour
     private float happinessRate;
     private Rigidbody2D rb;
     private Vector2 newPos;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip eatingClip;
 
     public enum Species
     {
@@ -71,6 +73,7 @@ public class Animal : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         hungerRate = 100f / timeInSecondsToHungerFull;
         happinessRate = 100f / timeInSecondToHappinessEmpty;
         nameText.text = animalName;
@@ -136,6 +139,7 @@ public class Animal : MonoBehaviour
         if (hunger < 0) hunger = 0;
         happiness += foodAmount * 0.1f;
         if (happiness > 100) happiness = 100;
+        audioSource.PlayOneShot(eatingClip);
     }
 
     public void PlayWithToy(float funAmount)
