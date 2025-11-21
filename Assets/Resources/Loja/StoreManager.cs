@@ -81,6 +81,16 @@ public class StoreManager : MonoBehaviour
                 int autoClickvalueInt = (int)item.value;
                 coinsManager.AutoClickPower += autoClickvalueInt;
                 break;
+
+            case "SecondAutoClick":
+                int SecAutoClickValueInt = (int)item.value;
+                coinsManager.SecondAutoClickON = SecAutoClickValueInt;
+
+                coinsManager.SecondAutoClickTimerStart = item.value2;
+
+                int SecAutoClickPower = (int)item.value3;
+                coinsManager.SecondAutoClickPower += SecAutoClickPower;
+                break;
         }
 
         OnPurchaseSucceeded?.Invoke(item);

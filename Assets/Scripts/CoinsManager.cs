@@ -9,24 +9,22 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private CoinsDisplay coinsDisplay;
     [SerializeField] private GameObject amountPrefab;
     [SerializeField] private Transform canvasParent;
-    //public float initialAutoClickTimer /*{ get => PlayerPrefs.GetFloat(AutoClickSpeedKey); set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value)} } */= 4f;
-    private float autoClickTimer = 4f;
+
+    [SerializeField] private float autoClickTimer = 4f;
+    [SerializeField] private float secondAutoClickTimer = 20f;
     const string CoinsKey = "WALLET_COINS";
     const string ClickKey = "CLICK_POWER";
     const string AutoClickKey = "AUTO_CLICK_ACTIVATED";
     const string AutoClickSpeedKey = "AUTO_CLICK_SPEED";
     const string AutoClickPowerKey = "AUTO_CLICK_POWER";
+    const string SecondAutoClickKey = "2ND_AUTO_CLICK_KEY";
+    const string SecondAutoClickSpeedKey = "2ND_AUTO_CLICK_SPEED_KEY";
+    const string SecondAutoClickPowerKey = "2ND_AUTO_CLICK_POWER_KEY";
 
     private void Update()
     {
-        if (AutoClickON != 1)
-        {
-            return;
-        }
-        else
-        {
-            AutoClickerTimer();
-        }
+        if (AutoClickON == 1) { AutoClickerTimer(); }
+        if (SecondAutoClickON == 1) { SecondAutoClick(); }
     }
 
     #region variaveis pt 2
@@ -46,6 +44,25 @@ public class CoinsManager : MonoBehaviour
         get => PlayerPrefs.GetInt(AutoClickPowerKey);
         set { PlayerPrefs.SetInt(AutoClickPowerKey, value); PlayerPrefs.Save(); }
     }
+
+    public int SecondAutoClickON
+    {
+        get => PlayerPrefs.GetInt(SecondAutoClickKey);
+        set { PlayerPrefs.SetInt(SecondAutoClickKey, value); PlayerPrefs.Save(); }
+    }
+
+    public float SecondAutoClickTimerStart
+    {
+        get => PlayerPrefs.GetFloat(SecondAutoClickSpeedKey);
+        set { PlayerPrefs.SetFloat(SecondAutoClickSpeedKey, value); PlayerPrefs.Save(); }
+    }
+
+    public int SecondAutoClickPower
+    {
+        get => PlayerPrefs.GetInt(SecondAutoClickPowerKey);
+        set { PlayerPrefs.SetInt(SecondAutoClickPowerKey, value); PlayerPrefs.Save(); }
+    }
+
 
     public int ClickPower
     {
@@ -94,5 +111,18 @@ public class CoinsManager : MonoBehaviour
         Coins = Coins + 1 + AutoClickPower;
         coinsDisplay.UpdateCoins();
         autoClickTimer = AutoClickTimerStart;
+    }
+
+    public void SecondAutoClick()
+    {
+        secondAutoClickTimer -= Time.deltaTime;
+
+        if (secondAutoClickTimer < 0)
+        {
+            Coins = Coins + SecondAutoClickPower;
+            coinsDisplay.UpdateCoins();
+            secondAutoClickTimer = SecondAutoClickTimerStart;
+        }
+     
     }
 }

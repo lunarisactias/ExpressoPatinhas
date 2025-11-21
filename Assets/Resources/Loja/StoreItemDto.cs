@@ -15,6 +15,7 @@ public class StoreItemDto
     public string key;
     public float value;
     public float value2;
+    public float value3;
 }
 
     [Serializable]
