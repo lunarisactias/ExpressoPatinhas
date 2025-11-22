@@ -9,6 +9,7 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private CoinsDisplay coinsDisplay;
     [SerializeField] private GameObject amountPrefab;
     [SerializeField] private Transform canvasParent;
+    public static CoinsManager Instance { get; private set; }
     //public float initialAutoClickTimer /*{ get => PlayerPrefs.GetFloat(AutoClickSpeedKey); set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value)} } */= 4f;
     private float autoClickTimer = 4f;
     const string CoinsKey = "WALLET_COINS";
@@ -61,12 +62,27 @@ public class CoinsManager : MonoBehaviour
 
     #endregion
 
+    private void Start()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        coinsDisplay.UpdateCoins();
+    }
+
     public bool canAfford(int cost) => Coins >= cost;
 
     public bool TryDebit(int cost)
     {
         if (!canAfford(cost)) return false;
         Coins -= cost;
+        coinsDisplay.UpdateCoins();
         return true;
     }
 
