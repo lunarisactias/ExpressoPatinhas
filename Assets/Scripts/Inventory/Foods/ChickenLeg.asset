@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: ChickenLeg
   itemIcon: {fileID: 21300000, guid: 7649c40bc9c84f64385d7256d918205c, type: 3}
   itemPrefab: {fileID: 6262366194206564305, guid: 6b2677ca6f5e48f4ab97ec5c5e23968b, type: 3}
+  price: 100
+  descricao: Uma coxa de galinha.
   maxStack: 99
   nutritionValue: 20

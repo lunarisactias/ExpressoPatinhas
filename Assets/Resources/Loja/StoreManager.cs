@@ -15,6 +15,9 @@ public class StoreManager : MonoBehaviour
     [SerializeField] private StoreDatabase storeDB;
     [SerializeField] private Transform decoParent;
 
+    [SerializeField] private GameObject ConsumablesStore;
+    [SerializeField] private GameObject UpgradesStore;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -94,5 +97,16 @@ public class StoreManager : MonoBehaviour
         }
 
         OnPurchaseSucceeded?.Invoke(item);
+    }
+
+    public void ConsumableButton()
+    {
+        ConsumablesStore.SetActive(true);
+        UpgradesStore.SetActive(false);
+    }
+    public void UpgradesButton()
+    {
+        ConsumablesStore.SetActive(false);
+        UpgradesStore.SetActive(true);
     }
 }

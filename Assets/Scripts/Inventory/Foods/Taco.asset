@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: Taco
   itemIcon: {fileID: 21300000, guid: cd43343c457c88c43b108eed36033b62, type: 3}
   itemPrefab: {fileID: 6262366194206564305, guid: a984ffc9eccb92349a7c7ca074cbd9d4, type: 3}
+  price: 100
+  descricao: Um taco de frango.
   maxStack: 99
   nutritionValue: 20

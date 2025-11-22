@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: CannedTuna
   itemIcon: {fileID: 21300000, guid: d4a452500144d7147af77168e994eefb, type: 3}
   itemPrefab: {fileID: 6262366194206564305, guid: fd5f384572fd19047b4a0bc8fd6d645c, type: 3}
+  price: 100
+  descricao: Uma lata cheia de atum fresquinho.
   maxStack: 99
   nutritionValue: 20

@@ -20,15 +20,14 @@ public class InventoryManager : MonoBehaviour
         {
             slots[i] = slotsHolder.transform.GetChild(i).gameObject;
         }
+
+        RefreshUI();
+
+        this.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            AddItem(itemsToAdd[Random.Range(0, itemsToAdd.Length)]);
-            RefreshUI();
-        }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             ItemClass itemToRemove = itemsToAdd[Random.Range(0, itemsToAdd.Length)];
@@ -65,7 +64,18 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(ItemClass item)
     {
+        var price = item.price;
+
+        if (!CoinsManager.Instance.canAfford(price))
+        {
+            Debug.Log("Not enough coins to buy this item.");
+            return;
+        }
+
+        CoinsManager.Instance.TryDebit(price);
+
         SlotClass slot = ContainsItem(item);
+
         if (slot != null)
         {
             slot.AddQuantity(1);
@@ -77,17 +87,18 @@ public class InventoryManager : MonoBehaviour
             if (items.Count > slotsHolder.transform.childCount)
             {
                 Instantiate(slotPrefab, slotsHolder.transform);
+
                 slots = new GameObject[slotsHolder.transform.childCount];
                 for (int i = 0; i < slots.Length; i++)
                 {
                     slots[i] = slotsHolder.transform.GetChild(i).gameObject;
                 }
-                RefreshUI(); 
             }
-
         }
 
-        Debug.Log($"Added item: {item.itemName}");
+        RefreshUI();
+
+        Debug.Log($"Added item: {item.itemName} | Cost: {price}");
     }
 
     public bool RemoveItem(ItemClass item)

@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: Popcorn
   itemIcon: {fileID: 21300000, guid: 1691986b7e89f8144ae31ee08b7b0625, type: 3}
   itemPrefab: {fileID: 6262366194206564305, guid: 47e6ed1f07d34e44eac149688b7a5453, type: 3}
+  price: 100
+  descricao: Um balde cheio de pipoca.
   maxStack: 99
   nutritionValue: 20

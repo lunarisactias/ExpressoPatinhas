@@ -14,6 +14,7 @@ public class StoreItemView : MonoBehaviour
     [SerializeField] private Button buyButton;
 
     private StoreItemDto _item;
+    private ItemClass _itemClass;
     private StoreManager _manager;
 
     public void Bind(StoreItemDto item, StoreManager manager)
@@ -34,6 +35,23 @@ public class StoreItemView : MonoBehaviour
 
         // estado visual se já comprado (opcional)
         buyButton.interactable = !item.purchased;
+
+    }
+
+    public void BindConsumable(ItemClass item, StoreManager manager)
+    {
+        _itemClass = item;
+        _manager = manager;
+
+        nameText.text = item.name;
+        descText.text = item.descricao;
+        priceText.text = $"Custo: {item.price}";
+
+        var sprite = item.itemIcon;
+        if (sprite != null) iconImage.sprite = sprite;
+
+        buyButton.onClick.RemoveAllListeners();
+        buyButton.onClick.AddListener(OnBuyClicked);
 
     }
 
