@@ -401,6 +401,9 @@ MonoBehaviour:
   playButton: {fileID: 1386578934}
   configButton: {fileID: 874348866}
   configPanel: {fileID: 1880085710}
+  animTimer: 0
+  isPressed: 0
+  menuAnim: {fileID: 2083159767}
 --- !u!114 &280988402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,10 +1257,10 @@ RectTransform:
   - {fileID: 1042376393}
   m_Father: {fileID: 280988405}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 74.099976}
-  m_SizeDelta: {x: 600, y: 386.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 15.025024, y: 331}
+  m_SizeDelta: {x: -196.05005, y: -1833.9}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1386578936
 MonoBehaviour:
@@ -1818,6 +1821,7 @@ GameObject:
   - component: {fileID: 2083159764}
   - component: {fileID: 2083159766}
   - component: {fileID: 2083159765}
+  - component: {fileID: 2083159767}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1842,7 +1846,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 199.99997, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2083159765
 MonoBehaviour:
@@ -1864,7 +1868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1129153242838916347, guid: 3d9e2e22d4695c04e8900c62db81fa24, type: 3}
+  m_Sprite: {fileID: 7850382749055515547, guid: 807fea7f58d77b4438690c59e92a97f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1882,6 +1886,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083159763}
   m_CullTransparentMesh: 1
+--- !u!95 &2083159767
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083159763}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3568c89a951a3f64fba7649855885571, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

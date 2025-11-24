@@ -47,8 +47,18 @@ public class StoreManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(item.prefabpatch))
         {
-            var prefab = Resources.Load<GameObject>(item.prefabpatch);
-            if (prefab != null) Instantiate(prefab, decoParent);
+            GameObject overlayPurchasedObj = GameObject.Find(item.prefabName + "(Clone)");
+            if (overlayPurchasedObj == null)
+            {
+                var prefab = Resources.Load<GameObject>(item.prefabpatch);
+                if (prefab != null) Instantiate(prefab, decoParent);
+            }
+            else
+            {
+                Destroy(overlayPurchasedObj);
+                var prefab = Resources.Load<GameObject>(item.prefabpatch);
+                if (prefab != null) Instantiate(prefab, decoParent);
+            }
         }
 
         switch (item.key)
@@ -77,7 +87,7 @@ public class StoreManager : MonoBehaviour
                 break;
 
             case "FasterAutoclick":
-                coinsManager.AutoClickTimerStart -= item.value;
+                coinsManager.AutoClickTimerStart += item.value;
                 break;
 
             case "BetterAutoclick":

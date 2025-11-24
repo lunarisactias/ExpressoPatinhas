@@ -9,15 +9,10 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private CoinsDisplay coinsDisplay;
     [SerializeField] private GameObject amountPrefab;
     [SerializeField] private Transform canvasParent;
-<<<<<<< HEAD
 
     [SerializeField] private float autoClickTimer = 4f;
     [SerializeField] private float secondAutoClickTimer = 20f;
-=======
     public static CoinsManager Instance { get; private set; }
-    //public float initialAutoClickTimer /*{ get => PlayerPrefs.GetFloat(AutoClickSpeedKey); set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value)} } */= 4f;
-    private float autoClickTimer = 4f;
->>>>>>> Luna
     const string CoinsKey = "WALLET_COINS";
     const string ClickKey = "CLICK_POWER";
     const string AutoClickKey = "AUTO_CLICK_ACTIVATED";
@@ -41,7 +36,7 @@ public class CoinsManager : MonoBehaviour
     }
     public float AutoClickTimerStart
     {
-        get => 4 - PlayerPrefs.GetFloat(AutoClickSpeedKey);
+        get => PlayerPrefs.GetFloat(AutoClickSpeedKey);
         set { PlayerPrefs.SetFloat(AutoClickSpeedKey, value); PlayerPrefs.Save(); }
     }
 
@@ -131,7 +126,7 @@ public class CoinsManager : MonoBehaviour
     {
         Coins = Coins + 1 + AutoClickPower;
         coinsDisplay.UpdateCoins();
-        autoClickTimer = AutoClickTimerStart;
+        autoClickTimer = 4 - AutoClickTimerStart;
     }
 
     public void SecondAutoClick()

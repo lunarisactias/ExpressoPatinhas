@@ -15,11 +15,11 @@
 		{
 			"id": "2",
 			"name": "Brinquedo 1",
-			"descricao": "Melhora o carinho por click em 1",
+			"descricao": "Melhora o carinho por toque em 1",
 			"imagepatch": "Loja/Sprites/Tier1/Toy",
 			"price": 40,
 			"purchased": false,
-			"prefabName": "Toy1",
+			"prefabName": "Toy",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Toy",
 			"key":"BetterClick",
 			"value": 1
@@ -28,11 +28,11 @@
 		{
 			"id": "3",
 			"name": "Tapete 1",
-			"descricao": "Ativa o click automatico",
+			"descricao": "Ativa o carinho automatico",
 			"imagepatch": "Loja/Sprites/Tier1/Carpet",
 			"price": 50,
 			"purchased": false,
-			"prefabName": "Plant1",
+			"prefabName": "Carpet",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Carpet",
 			"key":"ActivateAutoclick",
 			"value": 1
@@ -40,12 +40,12 @@
 
 		{
 			"id": "4",
-			"name": "Tapete 1",
-			"descricao": "Melhora o carinho por click em 2",
+			"name": "Quadro 1",
+			"descricao": "Melhora o carinho por toque em 2",
 			"imagepatch": "Loja/Sprites/Tier1/Frame",
 			"price": 100,
 			"purchased": false,
-			"prefabName": "Frame1",
+			"prefabName": "Frame",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Frame",
 			"key":"BetterClick",
 			"value": 2
@@ -53,8 +53,8 @@
 
 		{
 			"id": "5",
-			"name": "Bebida & Agua 1",
-			"descricao": "+10 clicks a cada 20 segundos",
+			"name": "Comida & Agua 1",
+			"descricao": "+10 carinho a cada 20 segundos",
 			"imagepatch": "Loja/Sprites/Tier1/Food",
 			"price": 200,
 			"purchased": false,
@@ -69,7 +69,7 @@
 		{
 			"id": "6",
 			"name": "Planta 1",
-			"descricao": "Melhora o click automatico em 1",
+			"descricao": "Melhora o carinho automatico em 1",
 			"imagepatch": "Loja/Sprites/Tier1/Plant",
 			"price": 200,
 			"purchased": false,
@@ -82,7 +82,7 @@
 		{
 			"id": "7",
 			"name": "Decoracao da Parede 1",
-			"descricao": "Melhora o click automatico em 2",
+			"descricao": "Melhora o carinho automatico em 2",
 			"imagepatch": "Loja/Sprites/Tier1/WallDeco",
 			"price": 400,
 			"purchased": false,
@@ -95,18 +95,119 @@
 		{
 			"id": "8",
 			"name": "Travesseiro 1",
-			"descricao": "Melhora a velocidade do click automatico",
+			"descricao": "Melhora a velocidade do carinho automatico",
 			"imagepatch": "Loja/Sprites/Tier1/Pillow",
 			"price": 1000,
 			"purchased": false,
 			"prefabName": "Pillow",
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier1/Pillow",
 			"key":"FasterAutoclick",
-			"value": 3.25
+			"value": 0.75
+		},
+
+		{
+			"id": "9",
+			"name": "Parede & Chao 2",
+			"descricao": "Melhora o carinho por toque em 3",
+			"imagepatch": "Loja/Sprites/Tier2/Background",
+			"price": 100,
+			"purchased": false,
+			"key":"ChangeBackgroundImage",
+			"value": 3,
+			"value2": 2
+		},
+
+		{
+			"id": "10",
+			"name": "Brinquedo 2",
+			"descricao": "Melhora o carinho por toque em 4",
+			"imagepatch": "Loja/Sprites/Tier2/Toy",
+			"price": 200,
+			"purchased": false,
+			"prefabName": "Toy",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Toy",
+			"key":"BetterClick",
+			"value": 4
+		},
+
+		{
+			"id": "11",
+			"name": "Quadro 2",
+			"descricao": "Melhora o carinho por toque em 4",
+			"imagepatch": "Loja/Sprites/Tier2/Frame",
+			"price": 400,
+			"purchased": false,
+			"prefabName": "Frame",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Frame",
+			"key":"BetterClick",
+			"value": 4
+		},
+
+		{
+			"id": "12",
+			"name": "Planta 2",
+			"descricao": "Melhora o carinho automatico em 2",
+			"imagepatch": "Loja/Sprites/Tier2/Plant",
+			"price": 600,
+			"purchased": false,
+			"prefabName": "Plant",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Plant",
+			"key":"BetterAutoclick",
+			"value": 2
+		},
+
+		{
+			"id": "13",
+			"name": "Comida & Agua 2",
+			"descricao": "+15 carinho a cada 10 segundos",
+			"imagepatch": "Loja/Sprites/Tier2/Food",
+			"price": 750,
+			"purchased": false,
+			"prefabName": "Food",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Food",
+			"key": "SecondAutoClick",
+			"value": 1,
+			"value2" : 10,
+			"value3" : 15
+		},
+
+		{
+			"id": "14",
+			"name": "Tapete 2",
+			"descricao": "Melhora a velocidade do carinho automatico",
+			"imagepatch": "Loja/Sprites/Tier2/Carpet",
+			"price": 1000,
+			"purchased": false,
+			"prefabName": "Carpet",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Carpet",
+			"key":"FasterAutoclick",
+			"value": 0.75
+		},
+
+		{
+			"id": "15",
+			"name": "Decoracao da Parede 2",
+			"descricao": "Melhora o carinho automatico em 4",
+			"imagepatch": "Loja/Sprites/Tier2/WallDeco",
+			"price": 1200,
+			"purchased": false,
+			"prefabName": "WallDeco",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/WallDeco",
+			"key":"BetterAutoclick",
+			"value": 4
+		},
+
+		{
+			"id": "16",
+			"name": "Travesseiro 2",
+			"descricao": "Melhora a velocidade do carinho automatico",
+			"imagepatch": "Loja/Sprites/Tier2/Pillow",
+			"price": 2000,
+			"purchased": false,
+			"prefabName": "Pillow",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Pillow",
+			"key":"FasterAutoclick",
+			"value": 0.75
 		}
-		
-
-
-
 	]
 }
