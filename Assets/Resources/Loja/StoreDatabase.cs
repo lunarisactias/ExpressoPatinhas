@@ -42,7 +42,7 @@ public class StoreDatabase : MonoBehaviour
         return wrapper.item;
     }
 
-    public void SavePurchase(string id)
+    public void SavePurchase(string id, string prefabName)
     {
         var purchasedCsv = PlayerPrefs.GetString(PurchasedKey,"");
         var set = new HashSet<string>(purchasedCsv.Split(',', System.StringSplitOptions.RemoveEmptyEntries));

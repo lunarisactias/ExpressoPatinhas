@@ -208,6 +208,111 @@
 			"prefabpatch": "Loja/Prefabs/Decorations/Tier2/Pillow",
 			"key":"FasterAutoclick",
 			"value": 0.75
+		},
+
+		{
+			"id": "17",
+			"name": "Parede & Chao 3",
+			"descricao": "Melhora o carinho por toque em 5",
+			"imagepatch": "Loja/Sprites/Tier3/Background",
+			"price": 400,
+			"purchased": false,
+			"key":"ChangeBackgroundImage",
+			"value": 5,
+			"value2": 3
+		},
+
+		{
+			"id": "18",
+			"name": "Brinquedo 3",
+			"descricao": "Melhora o carinho por toque em 8",
+			"imagepatch": "Loja/Sprites/Tier3/Toy",
+			"price": 800,
+			"purchased": false,
+			"prefabName": "Toy",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Toy",
+			"key":"BetterClick",
+			"value": 8
+		},
+
+		{
+			"id": "19",
+			"name": "Quadro 3",
+			"descricao": "Melhora o carinho por toque em 5",
+			"imagepatch": "Loja/Sprites/Tier3/Frame",
+			"price": 1000,
+			"purchased": false,
+			"prefabName": "Frame",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Frame",
+			"key":"BetterClick",
+			"value": 10
+		},
+
+		{
+			"id": "20",
+			"name": "Planta 3",
+			"descricao": "Melhora o carinho automatico em 6",
+			"imagepatch": "Loja/Sprites/Tier3/Plant",
+			"price": 1200,
+			"purchased": false,
+			"prefabName": "Plant",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Plant",
+			"key":"BetterAutoclick",
+			"value": 6
+		},
+
+		{
+			"id": "21",
+			"name": "Comida & Agua 3",
+			"descricao": "+20 carinho a cada 5 segundos",
+			"imagepatch": "Loja/Sprites/Tier3/Food",
+			"price": 1500,
+			"purchased": false,
+			"prefabName": "Food",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Food",
+			"key": "SecondAutoClick",
+			"value": 1,
+			"value2" : 5,
+			"value3" : 20
+		},
+
+		{
+			"id": "22",
+			"name": "Tapete 3",
+			"descricao": "Melhora a velocidade do carinho automatico",
+			"imagepatch": "Loja/Sprites/Tier3/Carpet",
+			"price": 2000,
+			"purchased": false,
+			"prefabName": "Carpet",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Carpet",
+			"key":"FasterAutoclick",
+			"value": 0.75
+		},
+
+		{
+			"id": "23",
+			"name": "Decoracao da Parede 3",
+			"descricao": "Melhora o carinho automatico em 10",
+			"imagepatch": "Loja/Sprites/Tier3/WallDeco",
+			"price": 3000,
+			"purchased": false,
+			"prefabName": "WallDeco",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/WallDeco",
+			"key":"BetterAutoclick",
+			"value": 10
+		},
+
+		{
+			"id": "24",
+			"name": "Travesseiro 3",
+			"descricao": "Melhora a velocidade do carinho automatico",
+			"imagepatch": "Loja/Sprites/Tier3/Pillow",
+			"price": 5000,
+			"purchased": false,
+			"prefabName": "Pillow",
+			"prefabpatch": "Loja/Prefabs/Decorations/Tier3/Pillow",
+			"key":"FasterAutoclick",
+			"value": 0.75
 		}
 	]
 }

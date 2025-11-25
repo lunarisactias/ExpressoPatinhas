@@ -1499,8 +1499,10 @@ GameObject:
   - component: {fileID: 416176036}
   - component: {fileID: 416176035}
   - component: {fileID: 416176034}
+  - component: {fileID: 416176038}
+  - component: {fileID: 416176037}
   m_Layer: 0
-  m_Name: Plush-Toy-PNG-Clipart
+  m_Name: Brinquedo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1518,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2465c852006e5bb4d920f897e3756ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toyName: leao
+  toyName: Urso
   happinessValue: 10
 --- !u!212 &416176035
 SpriteRenderer:
@@ -1564,7 +1566,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d196e96e5181a324b8bf72780a905813, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c32166b5e5d12f4dbd74fe5cb965430, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1590,6 +1592,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &416176037
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416176033}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &416176038
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416176033}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.615385, y: 16.615385}
+    newSize: {x: 15, y: 13.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 13, y: 13}
+  m_EdgeRadius: 0
 --- !u!1 &436216782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4477,7 +4552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3f0b4f37dd60b4aa14960c37f580b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearOnStart: 1
+  clearOnStart: 0
 --- !u!114 &936953538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4495,6 +4570,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8049cd3f447863f4fb066de96d00d39a, type: 2}
   - {fileID: 2100000, guid: 30d4c16a60beaa6438a3fc64eff57677, type: 2}
   - {fileID: 2100000, guid: fbbb7f724d463ad49a74d9ea32df8070, type: 2}
+  - {fileID: 2100000, guid: f65bd76a095a5e842a6d73552946fd92, type: 2}
   coinsManager: {fileID: 936953540}
   storeDB: {fileID: 936953539}
   decoParent: {fileID: 198016176}
@@ -4513,7 +4589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonResourcePath: Loja/JSON_Item
-  clearOnStart: 1
+  clearOnStart: 0
 --- !u!114 &936953540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4526,7 +4602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784ad82dbb1c56a41bf33ba3883831c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialCoins: 1000
+  initialCoins: 0
   coinsDisplay: {fileID: 2052212177}
   amountPrefab: {fileID: 2508162134231804718, guid: 212002b25eb4b834ba963a2974046c6d, type: 3}
   canvasParent: {fileID: 756019090}
@@ -7457,7 +7533,7 @@ MonoBehaviour:
   age: 12
   specie: 0
   color: 5
-  happiness: 100
+  happiness: 50
   hunger: 40.2
   hungerLevel: {fileID: 1496650004}
   happinessLevel: {fileID: 1999717870}

@@ -40,7 +40,7 @@ public class StoreManager : MonoBehaviour
             return;
         }
 
-        storeDB.SavePurchase(item.id);
+        storeDB.SavePurchase(item.id, item.prefabName);
         item.purchased = true;
         audioSource.PlayOneShot(purchaseSound);
 

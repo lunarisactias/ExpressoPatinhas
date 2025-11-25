@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private float animTimer;
     [SerializeField] private bool isPressed;
     [SerializeField] private Animator menuAnim;
+    [SerializeField] private GameObject QRCodeGame;
+    [SerializeField] private GameObject QRCodeInstaJogos;
 
     private void Update()
     {
@@ -43,5 +45,21 @@ public class Menu : MonoBehaviour
         {
             configPanel.SetActive(true);
         }
+    }
+
+    public void QRCodeExpressoPatinhas()
+    {
+        QRCodeGame.SetActive(true);
+    }
+
+    public void QRCodeJogosDigitais()
+    {
+        QRCodeInstaJogos.SetActive(true);
+    }
+
+    public void Close()
+    {
+        QRCodeGame.SetActive(false);
+        QRCodeInstaJogos.SetActive(false);
     }
 }

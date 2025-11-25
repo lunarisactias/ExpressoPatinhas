@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d196e96e5181a324b8bf72780a905813
+guid: f98457e0c4437094c948ff96ab3953e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2575932094317684056
-    second: Plush-Toy-PNG-Clipart_0
+      213: -5124022223100247867
+    second: brin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plush-Toy-PNG-Clipart_0
+      name: brin_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 71
-        width: 1152
-        height: 1156
+        x: 213
+        y: 163
+        width: 591
+        height: 756
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8556557879c8fb320800000000000000
-      internalID: 2575932094317684056
+      spriteID: 5c007e2bfe0d3e8b0800000000000000
+      internalID: -5124022223100247867
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Plush-Toy-PNG-Clipart_0: 2575932094317684056
+      brin_0: -5124022223100247867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

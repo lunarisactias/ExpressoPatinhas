@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: d196e96e5181a324b8bf72780a905813
+guid: aa876cce23393284b8ffd50ef9870987
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2575932094317684056
-    second: Plush-Toy-PNG-Clipart_0
+      213: -8594470630424453495
+    second: Quadro_3_0
+  - first:
+      213: 6728200792057626758
+    second: Quadro_3_1
+  - first:
+      213: -5676676628613974961
+    second: Quadro_3_2
+  - first:
+      213: -9162966587656817790
+    second: Quadro_3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 65
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,30 +118,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plush-Toy-PNG-Clipart_0
+      name: Quadro_3_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 71
-        width: 1152
-        height: 1156
+        x: 548
+        y: 1638
+        width: 103
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8556557879c8fb320800000000000000
-      internalID: 2575932094317684056
+      spriteID: 98ed5014f7e4ab880800000000000000
+      internalID: -8594470630424453495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quadro_3_1
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1418
+        width: 286
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680c81c09fe5f5d50800000000000000
+      internalID: 6728200792057626758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quadro_3_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1417
+        width: 149
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44b3bebea46831b0800000000000000
+      internalID: -5676676628613974961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quadro_3_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1264
+        width: 362
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28331fd9f6a96d080800000000000000
+      internalID: -9162966587656817790
       vertices: []
       indices: 
       edges: []
@@ -161,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Plush-Toy-PNG-Clipart_0: 2575932094317684056
+      Quadro_3_0: -8594470630424453495
+      Quadro_3_1: 6728200792057626758
+      Quadro_3_2: -5676676628613974961
+      Quadro_3_3: -9162966587656817790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

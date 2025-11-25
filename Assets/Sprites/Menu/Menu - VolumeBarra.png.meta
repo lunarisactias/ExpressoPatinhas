@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d196e96e5181a324b8bf72780a905813
+guid: 2e1d74266759477438c00638f2e326d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2575932094317684056
-    second: Plush-Toy-PNG-Clipart_0
+      213: 398804311482380314
+    second: Menu - VolumeBarra_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 65
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plush-Toy-PNG-Clipart_0
+      name: Menu - VolumeBarra_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 71
-        width: 1152
-        height: 1156
+        x: 14
+        y: 21
+        width: 820
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8556557879c8fb320800000000000000
-      internalID: 2575932094317684056
+      spriteID: a103dc88866d88500800000000000000
+      internalID: 398804311482380314
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Plush-Toy-PNG-Clipart_0: 2575932094317684056
+      Menu - VolumeBarra_0: 398804311482380314
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
