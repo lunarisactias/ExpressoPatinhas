@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36cd3f0b7dbfea4986594cccba4a8e9, type: 3}
+  m_Name: RatoBorracha
+  m_EditorClassIdentifier: 
+  itemName: RatoBorracha
+  itemIcon: {fileID: 21300000, guid: d57bce6f1c81c8e4ca873f4bddb8aad5, type: 3}
+  itemPrefab: {fileID: 7854419464261987171, guid: 54c54e5ba7ccbf4449f7304dc88e9c2c, type: 3}
+  price: 100
+  descricao: .
+  maxStack: 99
+  funValue: 25
