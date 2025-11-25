@@ -12,8 +12,9 @@ public class CameraManager : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip openDoorClip;
 
-    [Header("LOJA")]
-    public bool storeOpen;
+    [Header("LOJA E INVENTARIO GR")]
+    public bool storeOpen = false;
+    public bool inventoryOpen = false;
 
     void Start()
     {
@@ -39,8 +40,13 @@ public class CameraManager : MonoBehaviour
     private void MoveCamera()
     {
         MoveCameraUp();
-        MoveCameraLeft();
-        MoveCameraRight();
+
+        if (storeOpen || inventoryOpen) { return; }
+        else
+        {
+            MoveCameraLeft();
+            MoveCameraRight();
+        }
     }
     public void MoveCameraLeft()
     {
