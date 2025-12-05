@@ -39,11 +39,11 @@ public class CameraManager : MonoBehaviour
 
     private void MoveCamera()
     {
-        MoveCameraUp();
 
         if (storeOpen || inventoryOpen) { return; }
         else
         {
+            MoveCameraUp();
             MoveCameraLeft();
             MoveCameraRight();
         }
